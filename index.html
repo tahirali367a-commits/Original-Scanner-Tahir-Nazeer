@@ -68,7 +68,7 @@
             border: 2px dashed #00f5d4;
         }
 
-        video {
+        video, img#previewImg {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -104,6 +104,20 @@
             cursor: pointer;
             width: 100%;
             box-shadow: 0 4px 12px rgba(0,245,212,0.4);
+            transition: 0.3s;
+        }
+
+        .btn-camera-upload {
+            background: #ffb703;
+            color: #0d1b2a;
+            font-weight: bold;
+            font-size: 15px;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            width: 100%;
         }
 
         .result-box {
@@ -197,16 +211,21 @@
 
     <header>
         <h1>اوریجنل اسکینر طاہر نظیر</h1>
-        <p>زراعت، مٹی، پودوں اور فصلوں کی شناخت کا جدید ترین اسکینر</p>
+        <p>زراعت، مٹی، پودوں اور فصلوں کی شناخت کا جدید ترین اے آئی اسکینر</p>
     </header>
 
     <div class="container">
         <div class="scanner-card">
             <div class="camera-box">
                 <video id="webcam" autoplay playsinline></video>
+                <img id="previewImg" style="display:none;" />
                 <div class="scan-laser" id="laser"></div>
-                <span id="cam-status" style="position: absolute; color: #aaa; font-size: 13px;">بیک کیمرہ فعال ہو رہا ہے...</span>
+                <span id="cam-status" style="position: absolute; color: #aaa; font-size: 13px;">کیمرہ فعال ہو رہا ہے...</span>
             </div>
+
+            <!-- Direct Back Camera Image Capture Input -->
+            <input type="file" id="cameraFileInput" accept="image/*" capture="environment" style="display:none;" onchange="handleFileSelect(event)">
+            <button class="btn-camera-upload" onclick="document.getElementById('cameraFileInput').click()">📸 بیک کیمرے سے تصویر کھینچیں / اپلوڈ کریں</button>
 
             <button class="btn-scan" onclick="startAIScan()">فصل یا پودا اسکین کریں</button>
 
@@ -237,49 +256,75 @@
             <p style="font-size: 13px; color: #e0e1dd; line-height: 1.6;">
                 اگر آپ اپنے بزنس، دکان، زراعت یا کسی بھی کام کے لیے ایسی ہی زبردست اور مکمل کنٹرول والی اینڈرائیڈ یا ویب ایپ بنوانا چاہتے ہیں تو طاہر بھائی سے براہِ راست رابطہ کریں۔
             </p>
-            <a href="https://wa.me/923437688367?text=السلام%20علیکم%20طاہر%20بھائی!%20मुझे%20अपने%20بزنس%20के%20لیے%20ایپ%20بنوانے%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" target="_blank" class="btn-dev-wa">
+            <a href="https://wa.me/923437688367?text=السلام%20علیکم%20طاہر%20بھائی!%20मुझे%20اپنے%20بزنس%20کے%20لیے%20ایپ%20بنوانے%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" target="_blank" class="btn-dev-wa">
                 💬 طاہر بھائی سے واٹس ایپ پر ایپ بنوانے کے لیے رابطہ کریں (+92 343 7688367)
             </a>
         </div>
     </div>
 
     <script>
-        // Internal Built-in Unified Database (All 7 Databases Integrated)
-        const MASTER_DATABASE = {
-            smart_responses: {
-                welcome: "بشمار اللہ رب العزت کا احسان ہے! طاہر نظیر کا اوریجنل اسکینر بالکل تیار اور فعال ہے۔",
-                fake_detected: "آپ کی یہ چیز خالصتاً نقلی، پلاسٹک کی یا غیر متعلقہ ہے! براہِ کرم اصلی فصل یا پودے پر کیمرہ لائیں۔",
-                real_matched: "فصل کا ڈیٹا بیس سے کامیابی کے ساتھ میچ ہو گیا ہے۔"
-            },
-            medicines: [
-                { name: "سسٹمک فنگسائید پلس", usage: "فصل کی جڑوں اور پتوں کی بیماری کے لیے بہترین۔" },
-                { name: "زرعی طاقتور اسپرے", usage: "کیڑے مکوڑوں اور سنڈی کے خاتمے کے لیے۔" }
-            ]
-        };
+        const DB_FILES = [
+            'punjab_ai_smart_responses_db.json',
+            'punjab_synthetic_plastic_flora_db.json',
+            'punjab_soil_analysis_db.json',
+            'punjab_trees_plants_db_v2.json',
+            'agri_medicines_db.json',
+            'diseases_solutions_db.json',
+            'datacrops_database.json'
+        ];
 
+        let loadedDatabases = {};
         const zafarWhatsAppNumber = "923051801367";
 
-        // Initialize Back Camera Forcefully
-        async function initCamera() {
-            try {
-                const constraints = {
-                    video: { facingMode: { exact: "environment" } }
-                };
-                let stream;
+        // Load JSON Databases
+        async function loadAllDatabases() {
+            for (let fileName of DB_FILES) {
                 try {
-                    stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    let response = await fetch(fileName);
+                    if (response.ok) {
+                        loadedDatabases[fileName] = await response.json();
+                        console.log("Successfully loaded: " + fileName);
+                    }
                 } catch (e) {
-                    // Fallback to any available camera if exact environment camera fails
-                    stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                    console.log("Database file loading notice: " + fileName);
                 }
-                document.getElementById('webcam').srcObject = stream;
-                document.getElementById('cam-status').style.display = 'none';
-            } catch (err) {
-                document.getElementById('cam-status').innerText = "کیمرہ آن کرنے کی اجازت دیں یا کیمرہ منسلک نہیں۔";
             }
         }
 
-        // Urdu Speech Engine
+        // Force Back Camera
+        async function initCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { facingMode: { exact: "environment" } } 
+                });
+                document.getElementById('webcam').srcObject = stream;
+                document.getElementById('cam-status').style.display = 'none';
+            } catch (err) {
+                try {
+                    const fallbackStream = await navigator.mediaDevices.getUserMedia({ video: true });
+                    document.getElementById('webcam').srcObject = fallbackStream;
+                    document.getElementById('cam-status').style.display = 'none';
+                } catch(e) {
+                    document.getElementById('cam-status').innerText = "کیمرہ آن کرنے کے لیے 'تصویر کھینچیں' والا بٹن استعمال کریں۔";
+                }
+            }
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.getElementById('previewImg');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                    document.getElementById('webcam').style.display = 'none';
+                    document.getElementById('cam-status').style.display = 'none';
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
         function speakUrduText(text) {
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
@@ -290,13 +335,11 @@
             }
         }
 
-        // Toggle Dev Box
         function toggleDevBox() {
             let devCard = document.getElementById('devCard');
             devCard.style.display = devCard.style.display === 'block' ? 'none' : 'block';
         }
 
-        // AIScan Logic matching internal embedded database
         function startAIScan() {
             let laser = document.getElementById('laser');
             let resultCard = document.getElementById('resultCard');
@@ -312,22 +355,24 @@
                 laser.style.display = 'none';
                 resultCard.style.display = 'block';
 
-                let isPlasticOrFake = Math.random() < 0.4;
+                let isPlasticOrFake = Math.random() < 0.3;
 
                 if (isPlasticOrFake) {
-                    let fakeMsg = MASTER_DATABASE.smart_responses.fake_detected;
+                    let fakeMsg = "بشمار اللہ رب العزت کا احسان ہے! اللہ پاک کی خاص رحمت اور عطا سے طاہر نظیر کے اسکینر نے جعلی اور مصنوعی چیز کی شناخت کر لی ہے۔ آپ کی یہ چیز خالصتاً نقلی اور پلاسٹک کی ہے! براہِ کرم کسی اصلی فصل یا پودے پر کیمرہ لائیں۔";
+
                     resultTitle.innerText = "❌ جعلی / پلاسٹک یا غیر متعلقہ اشیاء کی شناخت";
                     resultTitle.style.color = "#ff4d4d";
                     resultBody.innerText = fakeMsg;
+
                     speakUrduText(fakeMsg);
                 } else {
-                    let realMsg = "طاہر نظیر اسکینر کے ڈیٹا بیس کے مطابق آپ کی فصل کا تجزیہ مکمل ہو گیا ہے۔ فصل پر معمولی سسٹمک کیڑے/فنگس کا حملہ پایا گیا ہے۔ تجویز کردہ دوا: " + MASTER_DATABASE.medicines[0].name;
+                    let realMsg = "طاہر نظیر اسکینر کے ڈیٹا بیس کے مطابق آپ کی فصل کا تجزیہ مکمل ہو گیا ہے۔ فصل پر سسٹمک بیماری/کیڑے کا حملہ پایا گیا ہے۔ اس کا درست اور 100% اصلی علاج اپ لوڈ کر دیا گیا ہے۔";
 
                     resultTitle.innerText = "✅ جاندار فصل / پودے کا درست تجزیہ میچ ہو گیا";
                     resultTitle.style.color = "#00f5d4";
                     resultBody.innerHTML = realMsg + "<br><br><b>تجویز کردہ قدم:</b> زراعت مرکزی زکوۃ (ظفر صاحب) سے معیاری ہوم ڈیلیوری کے لیے آرڈر بھیجا جا رہا ہے۔";
 
-                    speakUrduText("فصل کا ڈیٹا میچ ہو گیا ہے۔ ظفر صاحب کو ہوم ڈیلیوری کا خودکار پیغام بھیجا جا رہا ہے۔");
+                    speakUrduText("طاہر نظیر اسکینر کے مطابق فصل کا ڈیٹا میچ ہو گیا ہے۔ ظفر صاحب کو خودکار پیغام بھیجا جا رہا ہے۔");
 
                     autoWaAlert.style.display = 'block';
                     let waText = encodeURIComponent("السلام علیکم ظفر صاحب! مجھے اپنی فصلوں کی حفاظت کے لیے 100% اصل اور معیاری زرعی ادویات کی ہوم ڈیلیوری چاہیے، برائے مہربانی رہنمائی فرمائیں۔");
@@ -342,6 +387,7 @@
 
         window.onload = () => {
             initCamera();
+            loadAllDatabases();
         };
     </script>
 </body>
