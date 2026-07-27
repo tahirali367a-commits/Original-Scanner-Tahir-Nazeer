@@ -1,0 +1,1676 @@
+{
+  "app_metadata": {
+    "project_name": "Tahir Nazeer Smart Crop Scanner Master DB - Ultra Extended Edition",
+    "version": "3.0.0",
+    "description": "پاکستان کی تمام اہم، جونیئر، چارہ جات، سبزیوں، پھلوں، مصالحہ جات اور جڑی بوٹیوں کی مکمل ماسٹر لسٹ مع بصری شناختی علامات اور بیماریاں",
+    "total_categories": 6,
+    "language": "Urdu Roman & Urdu Plain Text",
+    "author_credits": "Tahir Abbas (urf Tahir Nazeer)"
+  },
+  "crops_master_database": [
+    {
+      "category_id": "cash_crops_and_grains",
+      "category_name_urdu": "بڑی اور قیمتی نقد آور فصلیں و اناج",
+      "items": [
+        {
+          "id": "c_001",
+          "name_urdu": "گندم",
+          "type": "بڑی فصل (Major Crop)",
+          "visual_identification": {
+            "leaf_pattern": "باریک، لمبے، نوکدار اور متوازی رگوں والے پتے",
+            "stem_structure": "سیدھا، کھوکھلا اور بندوں والا تنا",
+            "color_and_features": "شروع میں گہرا سبز، پکنے پر سنہری پیلا۔ اوپر سٹا (Spike) بنتا ہے"
+          },
+          "common_diseases_and_issues": ["کنگئی (Rust)", "سمٹ (Smut)", "سُنڈی کا حملہ", "پتوں کا جلساؤ"]
+        },
+        {
+          "id": "c_002",
+          "name_urdu": "کپاس / کپاہ",
+          "type": "بڑی فصل (Major Crop)",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے پتے جو 3 سے 5 حصوں میں تقسیم ہوتے ہیں (پنجہ نما)",
+            "stem_structure": "مضبوط، لکڑی نما اور شاخ دار تنا",
+            "color_and_features": "پتے گہرے سبز، پھول پیلے اور بعد میں سرخ/سفید روئی کے ٹینڈے (Bolls)"
+          },
+          "common_diseases_and_issues": ["گلابی سنڈی", "سفید مکھی", "سبز تیلا", "کپاس کا پتوں کا مروڑ وائرس (CLCV)"]
+        },
+        {
+          "id": "c_003",
+          "name_urdu": "گنا / کماد",
+          "type": "بڑی فصل (Major Crop)",
+          "visual_identification": {
+            "leaf_pattern": "بہت لمبے، چوڑے، تلوار نما پتے جن کے کنارے تیز ہوتے ہیں",
+            "stem_structure": "موٹا، سخت، پوروں والا تنا جس میں رس ہوتا ہے",
+            "color_and_features": "تنا سبز، ارغوانی یا سرخ، پتے گہرے سبز"
+          },
+          "common_diseases_and_issues": ["کماد کی رٹ (Red Rot)", "پائے رلا (Pyrilla)", "ٹوپ بورر (Top Borer)", "کنگئی"]
+        },
+        {
+          "id": "c_004",
+          "name_urdu": "چاول / دھان",
+          "type": "بڑی فصل (Major Crop)",
+          "visual_identification": {
+            "leaf_pattern": "باریک، سائز میں درمیانے اور اوپر کو اٹھے ہوئے پتے",
+            "stem_structure": "پتلا، نرم اور شاخوں والا جو پانی میں کھڑا رہتا ہے",
+            "color_and_features": "روشنی والا سبز، پکنے پر سنہری پیلا۔ دانوں کا لچھا لٹکتا ہے"
+          },
+          "common_diseases_and_issues": ["تنے کی سنڈی (Stem Borer)", "پتہ لپیٹ سنڈی", "بلاسٹ بیماری (Rice Blast)", "بیکٹیریل بلائٹ"]
+        },
+        {
+          "id": "c_005",
+          "name_urdu": "مکئی",
+          "type": "بڑی فصل (Major Crop)",
+          "visual_identification": {
+            "leaf_pattern": "بہت چوڑے، لمبے اور لہراتے ہوئے پتے",
+            "stem_structure": "موٹا، سیدھا اور مضبوط تنا",
+            "color_and_features": "گہرا سبز۔ تنے کے سائیڈ پر چھلی (Cob) اور اوپر بور (Tassel) ہوتا ہے"
+          },
+          "common_diseases_and_issues": ["فال آرمی ورم (Fall Armyworm)", "تنے کی سڑن", "پتوں کا داغ"]
+        },
+        {
+          "id": "c_006",
+          "name_urdu": "جوار",
+          "type": "اناج و چارہ",
+          "visual_identification": {
+            "leaf_pattern": "مکئی سے ملتے جلتے مگر تھوڑے باریک پتے",
+            "stem_structure": "سیدھا اور اونچا تنا",
+            "color_and_features": "سبز رنگ، اوپر دانوں کا گچھا بنتا ہے"
+          },
+          "common_diseases_and_issues": ["شو ٹ فلائی (Shoot Fly)", "دانوں کا سڑنا"]
+        },
+        {
+          "id": "c_007",
+          "name_urdu": "باجرہ",
+          "type": "اناج و چارہ",
+          "visual_identification": {
+            "leaf_pattern": "لمبے اور کھردری سطح والے پتے",
+            "stem_structure": "پتلا اور لمبا تنا",
+            "color_and_features": "اوپر لمبا، بیلن نما سٹا بنتا ہے جو دانوں سے بھرا ہوتا ہے"
+          },
+          "common_diseases_and_issues": ["گرین ایئر بیماری", "ارگٹ (Ergot)"]
+        },
+        {
+          "id": "c_008",
+          "name_urdu": "جَو",
+          "type": "اناج",
+          "visual_identification": {
+            "leaf_pattern": "گندم کی طرح مگر تھوڑے سے روشن سبز پتے",
+            "stem_structure": "پتلا نازک تنا",
+            "color_and_features": "سٹے پر لمبی مونچھیں (Awns) ہوتی ہیں"
+          },
+          "common_diseases_and_issues": ["پتوں کی دھاریاں", "سمٹ"]
+        },
+        {
+          "id": "c_009",
+          "name_urdu": "سرسوں",
+          "type": "تیل دار فصل",
+          "visual_identification": {
+            "leaf_pattern": "نچلے پتے بڑے اور کٹے ہوئے، اوپر والے چھوٹے",
+            "stem_structure": "شاخ دار اور نرم تنا",
+            "color_and_features": "گہرے سبز پتے اور چمکیلے پیلے پھول"
+          },
+          "common_diseases_and_issues": ["سُست تیلا (Aphid)", "سفید زنگ (White Rust)"]
+        },
+        {
+          "id": "c_010",
+          "name_urdu": "رایا / توڑیا",
+          "type": "تیل دار فصل",
+          "visual_identification": {
+            "leaf_pattern": "سرسوں کی طرح مگر پتے تنے سے چپکے ہوتے ہیں",
+            "stem_structure": "باریک شاخیں",
+            "color_and_features": "پیلے پھول اور باریک پھلیاں"
+          },
+          "common_diseases_and_issues": ["تیلا", "پھلیوں کا جُلسنا"]
+        },
+        {
+          "id": "c_011",
+          "name_urdu": "کینولا",
+          "type": "تیل دار فصل",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے موٹے اور موم نما تہہ والے پتے",
+            "stem_structure": "مضبوط شاخ دار تنا",
+            "color_and_features": "گہرا سبز اور پیلے رنگ کے پھول"
+          },
+          "common_diseases_and_issues": ["تنے کا گلنا", "تیلا"]
+        },
+        {
+          "id": "c_012",
+          "name_urdu": "تِل",
+          "type": "تیل دار فصل",
+          "visual_identification": {
+            "leaf_pattern": "لمبوترے، آمنے سامنے والے پتے",
+            "stem_structure": "سیدھا، چار کونوں والا تنا",
+            "color_and_features": "سفید یا ہلکے گلابی گھنٹی نما پھول"
+          },
+          "common_diseases_and_issues": ["فائل وڈی (Phyllody)", "پتوں کی دھبے دار بیماری"]
+        },
+        {
+          "id": "c_013",
+          "name_urdu": "سورج مکھی",
+          "type": "تیل دار فصل",
+          "visual_identification": {
+            "leaf_pattern": "بہت بڑے، دل کی شکل کے کھردے پتے",
+            "stem_structure": "موٹا اور سخت سیدھا تنا",
+            "color_and_features": "بڑا پیلا پھول جو سورج کی طرف گھومتا ہے"
+          },
+          "common_diseases_and_issues": ["ہیڈ روٹ (Head Rot)", "پتوں کا جلساؤ"]
+        },
+        {
+          "id": "c_014",
+          "name_urdu": "تمباکو",
+          "type": "تجارتی فصل",
+          "visual_identification": {
+            "leaf_pattern": "بہت بڑے، چوڑے اور چپچپے پتے",
+            "stem_structure": "موٹا، نرم تنا",
+            "color_and_features": "گہرا سبز، اوپر چھوٹے پھول بنتے ہیں"
+          },
+          "common_diseases_and_issues": ["تمباکو موزیک وائرس (TMV)", "جڑ کا گلنا"]
+        },
+        {
+          "id": "c_015",
+          "name_urdu": "چنا (کالا و سفید)",
+          "type": "دال / اناج",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے، پر نما پتے جن کے کنارے دندانے دار ہوتے ہیں",
+            "stem_structure": "جھاڑی دار چھوٹا پودا",
+            "color_and_features": "سبز، ہلکے ترش قطرے پتوں پر ہوتے ہیں"
+          },
+          "common_diseases_and_issues": ["چنے کا جُلسنا (Blight)", "جڑ کی سڑن"]
+        },
+        {
+          "id": "c_016",
+          "name_urdu": "مسور",
+          "type": "دال",
+          "visual_identification": {
+            "leaf_pattern": "بہت باریک اور چھوٹے پتے",
+            "stem_structure": "کمزور اور نازک تنا",
+            "color_and_features": "چھوٹا پودا، چھوٹے پیلے/جامنی پھول"
+          },
+          "common_diseases_and_issues": ["زنگ (Rust)", "اٹھاؤ بیماری (Wilt)"]
+        },
+        {
+          "id": "c_017",
+          "name_urdu": "مونگ",
+          "type": "دال",
+          "visual_identification": {
+            "leaf_pattern": "تین پتوں کا مجموعہ (Trifoliate)",
+            "stem_structure": "جھاڑی دار اور نرم",
+            "color_and_features": "سبز پتے، کالے یا سبز رنگ کی باریک پھلیاں"
+          },
+          "common_diseases_and_issues": ["پیلا موزیک وائرس (YMV)", "پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "c_018",
+          "name_urdu": "ماش",
+          "type": "دال",
+          "visual_identification": {
+            "leaf_pattern": "مونگ سے ملتے جلتے مگر زیادہ روئیں دار پتے",
+            "stem_structure": "زمین پر پھیلنے والی شاخیں",
+            "color_and_features": "گہرا سبز، کالی پھلیاں"
+          },
+          "common_diseases_and_issues": ["پیلا موزیک وائرس", "پتوں کے دھبے"]
+        },
+        {
+          "id": "c_019",
+          "name_urdu": "موم پھلی",
+          "type": "تیل دار / گری دار",
+          "visual_identification": {
+            "leaf_pattern": "چار چھوٹے پتوں کا سیٹ",
+            "stem_structure": "زمین کے قریب پھیلنے والا پودا",
+            "color_and_features": "پیلے پھول جو زیر زمین جا کر پھلی بناتے ہیں"
+          },
+          "common_diseases_and_issues": ["ٹکا بیماری (Tikka Disease)", "جڑ کا گلنا"]
+        },
+        {
+          "id": "c_020",
+          "name_urdu": "سویا بین",
+          "type": "تیل دار / دال",
+          "visual_identification": {
+            "leaf_pattern": "تین چوڑے روئیں دار پتے",
+            "stem_structure": "سیدھا، مضبوط پودا",
+            "color_and_features": "چھوٹی روئیں دار پھلیاں"
+          },
+          "common_diseases_and_issues": ["پتوں کی کنگئی", "تنے کا جلساؤ"]
+        },
+        {
+          "id": "c_021",
+          "name_urdu": "ارنڈ / ارنڈی",
+          "type": "تجارتی فصل",
+          "visual_identification": {
+            "leaf_pattern": "بہت بڑے ستارے کی شکل کے پتے",
+            "stem_structure": "موٹا، سرخ یا سبز تنا",
+            "color_and_features": "کانٹے دار پھل کے گچھے"
+          },
+          "common_diseases_and_issues": ["کیپسول بورر", "پتوں کے دھبے"]
+        },
+        {
+          "id": "c_022",
+          "name_urdu": "السی",
+          "type": "تیل دار فصل",
+          "visual_identification": {
+            "leaf_pattern": "باریک اور نوکدار پتے",
+            "stem_structure": "پتلا، سیدھا تنا",
+            "color_and_features": "خوبصورت نیلے یا سفید پھول"
+          },
+          "common_diseases_and_issues": ["السی کا زنگ", "اٹھاؤ بیماری"]
+        },
+        {
+          "id": "c_023",
+          "name_urdu": "لوبیا / رواں",
+          "type": "دال / چارہ",
+          "visual_identification": {
+            "leaf_pattern": "تین چوڑے اور ہموار پتے",
+            "stem_structure": "بیل نما یا جھاڑی دار",
+            "color_and_features": "لمبی پھلیاں"
+          },
+          "common_diseases_and_issues": ["موزیک وائرس", "سُست تیلا"]
+        },
+        {
+          "id": "c_024",
+          "name_urdu": "ارہر",
+          "type": "دال",
+          "visual_identification": {
+            "leaf_pattern": "باریک لمبوترے تین پتے",
+            "stem_structure": "اونچی لکڑی دار جھاڑی",
+            "color_and_features": "پیلے اور سرخ دھاری دار پھول"
+          },
+          "common_diseases_and_issues": ["پھلی سوراخ کرنے والی سنڈی", "اٹھاؤ"]
+        },
+        {
+          "id": "c_025",
+          "name_urdu": "کلتھی",
+          "type": "دال",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے اور نرم پتے",
+            "stem_structure": "زمین پر بچھنے والی شاخیں",
+            "color_and_features": "سبز رنگ کا چھوٹا پودا"
+          },
+          "common_diseases_and_issues": ["خشک سالی سے جلنا", "پتوں کے دھبے"]
+        },
+        {
+          "id": "c_026",
+          "name_urdu": "باقلہ",
+          "type": "دال",
+          "visual_identification": {
+            "leaf_pattern": "موٹے اور نیلگوں سبز پتے",
+            "stem_structure": "سیدھا کھوکھلا تنا",
+            "color_and_features": "سفید اور کالے دھبے والے پھول"
+          },
+          "common_diseases_and_issues": ["چاکلیٹ اسپاٹ", "تنے کا گلنا"]
+        },
+        {
+          "id": "c_027",
+          "name_urdu": "زیرا (سفید و سیاہ)",
+          "type": "مصالحہ جات",
+          "visual_identification": {
+            "leaf_pattern": "باریک دھاگے نما کٹے ہوئے پتے",
+            "stem_structure": "چھوٹا، نازک اور شاخ دار تنا",
+            "color_and_features": "سفید یا گلابی چھتری نما پھول"
+          },
+          "common_diseases_and_issues": ["اٹھاؤ بیماری (Wilt)", "پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "c_028",
+          "name_urdu": "سونف",
+          "type": "مصالحہ و ادویاتی",
+          "visual_identification": {
+            "leaf_pattern": "انتہائی باریک، جال دار، خوشبودار پتے",
+            "stem_structure": "سیدھا، کھوکھلا اور لمبا تنا",
+            "color_and_features": "پیلے پھولوں کی بڑی چھتری"
+          },
+          "common_diseases_and_issues": ["تیلا", "جھلسنا"]
+        },
+        {
+          "id": "c_029",
+          "name_urdu": "کلونجی",
+          "type": "تجارتی / ادویاتی",
+          "visual_identification": {
+            "leaf_pattern": "باریک کٹے ہوئے نوکدار پتے",
+            "stem_structure": "سیدھا پودا",
+            "color_and_features": "ہلکے نیلے یا سفید پھول، اندر کالے بیج"
+          },
+          "common_diseases_and_issues": ["جڑ کا گلنا", "پتوں کے دھبے"]
+        },
+        {
+          "id": "c_030",
+          "name_urdu": "اجوائن",
+          "type": "مصالحہ جات",
+          "visual_identification": {
+            "leaf_pattern": "دھنیا اور سونف سے ملتے جلتے باریک پتے",
+            "stem_structure": "نازک جھاڑی",
+            "color_and_features": "سفید چھوٹے پھولوں کے گچھے"
+          },
+          "common_diseases_and_issues": ["سُست تیلا", "فنگس"]
+        }
+      ]
+    },
+    {
+      "category_id": "fodders_and_grasses",
+      "category_name_urdu": "پٹھے، چارہ جات اور تمام قسم کی گھاسیں",
+      "items": [
+        {
+          "id": "f_001",
+          "name_urdu": "برسیم",
+          "type": "سردیوں کا چارہ (پٹھے)",
+          "visual_identification": {
+            "leaf_pattern": "تین گول، نرم اور بغیر دندانے والے پتے",
+            "stem_structure": "نرم، رس دار اور شاخ دار تنا",
+            "color_and_features": "روشن سبز رنگ، سفید/ہلکے پیلے پھول کا گچھا"
+          },
+          "common_diseases_and_issues": ["تنے کا گلنا (Stem Rot)", "امر بیل کا حملہ"]
+        },
+        {
+          "id": "f_002",
+          "name_urdu": "شتالہ",
+          "type": "سردیوں کا چارہ (پٹھے)",
+          "visual_identification": {
+            "leaf_pattern": "برسیم جیسے مگر تھوڑے لمبوترے اور باریک پتے",
+            "stem_structure": "نرم اور زمین پر جھکنے والی شاخیں",
+            "color_and_features": "گلابی یا سرخ رنگ کے چھوٹے پھول"
+          },
+          "common_diseases_and_issues": ["پتوں کی جُلسن", "امر بیل"]
+        },
+        {
+          "id": "f_003",
+          "name_urdu": "لوسرن",
+          "type": "سدا بہار چارہ",
+          "visual_identification": {
+            "leaf_pattern": "تین باریک، لمبوترے پتے جن کے صرف ٹوائے پر دندانے ہوتے ہیں",
+            "stem_structure": "سخت، پتلی شاخیں",
+            "color_and_features": "گہرا سبز، جامنی/جامنی نیلے پھول"
+          },
+          "common_diseases_and_issues": ["لوسرن کا ویول (Weevil)", "ڈاؤن ملڈیو"]
+        },
+        {
+          "id": "f_004",
+          "name_urdu": "جئی / جَو کا چارہ",
+          "type": "سردیوں کا چارہ",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے، لمبے اور نرم پتے",
+            "stem_structure": "سیدھا کھوکھلا تنا",
+            "color_and_features": "سبز، اوپر لٹکتی ہوئی جئی کی بالیاں"
+          },
+          "common_diseases_and_issues": ["کنگئی (Crown Rust)", "پتوں کا جلساؤ"]
+        },
+        {
+          "id": "f_005",
+          "name_urdu": "جنتر / جنترہ",
+          "type": "سبز کھاد و چارہ",
+          "visual_identification": {
+            "leaf_pattern": "پر نما، بہت سے چھوٹے چھوٹے پتے ایک ساتھ",
+            "stem_structure": "اونچا، باریک لیکن سخت تنا",
+            "color_and_features": "پیلے پھول اور لمبی باریک پھلیاں"
+          },
+          "common_diseases_and_issues": ["سُنڈی کا حملہ", "پتوں کی کترن"]
+        },
+        {
+          "id": "f_006",
+          "name_urdu": "سپر نیپیئر گھاس",
+          "type": "زیادہ پیداوار والی گھاس",
+          "visual_identification": {
+            "leaf_pattern": "کماد جیسے چوڑے اور تیز کنارے والے پتے",
+            "stem_structure": "بہت موٹا اور اونچا گنا نما تنا",
+            "color_and_features": "گہرا سبز، تیزی سے بڑھنے والا گچھا"
+          },
+          "common_diseases_and_issues": ["تنے کا کیڑا", "پتوں کے دھبے"]
+        },
+        {
+          "id": "f_007",
+          "name_urdu": "روڈز گھاس",
+          "type": "تجارتی گھاس",
+          "visual_identification": {
+            "leaf_pattern": "باریک، نوکدار اور سخت پتے",
+            "stem_structure": "زمین پر پھیلنے والی جڑیں اور سیدھی شاخیں",
+            "color_and_features": "اوپر سے پنجے نما بیج کا گچھا بنتا ہے"
+          },
+          "common_diseases_and_issues": ["فنگس", "خشکی سے سوکھنا"]
+        },
+        {
+          "id": "f_008",
+          "name_urdu": "سودان گھاس",
+          "type": "گرمیوں کا چارہ",
+          "visual_identification": {
+            "leaf_pattern": "جوار جیسے چوڑے پتے",
+            "stem_structure": "باریک اور اونچائی میں بڑھنے والا تنا",
+            "color_and_features": "سبز، چارے کے لیے بار بار کٹائی کے قابل"
+          },
+          "common_diseases_and_issues": ["پتوں کا سڑنا", "تیلا"]
+        },
+        {
+          "id": "f_009",
+          "name_urdu": "مکھن گھاس",
+          "type": "خاص چارہ",
+          "visual_identification": {
+            "leaf_pattern": "بہت نرم، چمکدار اور لچکدار پتے",
+            "stem_structure": "نرم تنا",
+            "color_and_features": "روشن سبز، انتہائی نرم گھاس"
+          },
+          "common_diseases_and_issues": ["پانی کی زیادتی سے گلنا", "زنگ"]
+        },
+        {
+          "id": "f_010",
+          "name_urdu": "گوارہ / گوار",
+          "type": "گرمیوں کا چارہ / صنعتی",
+          "visual_identification": {
+            "leaf_pattern": "دندانے دار پتے",
+            "stem_structure": "سخت اور شاخ دار",
+            "color_and_features": "سبز، چھوٹے پھول اور سخت پھلیاں"
+          },
+          "common_diseases_and_issues": ["بیکٹیریل بلائٹ", "پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "f_011",
+          "name_urdu": "موتھ",
+          "type": "چارہ و دال",
+          "visual_identification": {
+            "leaf_pattern": "گہرے کٹے ہوئے پتے",
+            "stem_structure": "زمین پر پھیلنے والا",
+            "color_and_features": "پیلے چھوٹے پھول"
+          },
+          "common_diseases_and_issues": ["خشک سالی سے جلنا"]
+        },
+        {
+          "id": "f_012",
+          "name_urdu": "راوا چارہ",
+          "type": "گرمیوں کا چارہ",
+          "visual_identification": {
+            "leaf_pattern": "لوبیا جیسے چوڑے پتے",
+            "stem_structure": "نرم اور بیل نما شاخیں",
+            "color_and_features": "گہرا سبز"
+          },
+          "common_diseases_and_issues": ["تیلا", "پتوں کی گلن"]
+        },
+        {
+          "id": "f_013",
+          "name_urdu": "دھامن گھاس",
+          "type": "چرگاہ کی گھاس",
+          "visual_identification": {
+            "leaf_pattern": "باریک روئیں دار پتے",
+            "stem_structure": "جھاڑی دار گچھا",
+            "color_and_features": "سخت گھاس، نرم بیج"
+          },
+          "common_diseases_and_issues": ["کیڑے"]
+        },
+        {
+          "id": "f_014",
+          "name_urdu": "کاہو گھاس",
+          "type": "جنگلی گھاس",
+          "visual_identification": {
+            "leaf_pattern": "سخت نوکدار پتے",
+            "stem_structure": "باریک اور مضبوط",
+            "color_and_features": "خودرو گھاس"
+          },
+          "common_diseases_and_issues": ["کوئی اہم بیماری نہیں"]
+        },
+        {
+          "id": "f_015",
+          "name_urdu": "بارمودا گھاس / خبربل / تلا",
+          "type": "عام گھاس",
+          "visual_identification": {
+            "leaf_pattern": "بہت چھوٹے باریک اور سخت پتے",
+            "stem_structure": "زمین کے اندر اور اوپر بچھنے والی تاریں",
+            "color_and_features": "گہرا سبز، انتہائی سخت جڑیں"
+          },
+          "common_diseases_and_issues": ["پتوں کے دھبے"]
+        },
+        {
+          "id": "f_016",
+          "name_urdu": "سیڑوں گھاس",
+          "type": "چرگاہ گھاس",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے نرم پتے",
+            "stem_structure": "زمین پر پھیلنے والا",
+            "color_and_features": "گہرا سبز"
+          },
+          "common_diseases_and_issues": ["فنگس"]
+        },
+        {
+          "id": "f_017",
+          "name_urdu": "پرا گھاس",
+          "type": "دلڈلی زمین کی گھاس",
+          "visual_identification": {
+            "leaf_pattern": "روئیں دار چوڑے پتے",
+            "stem_structure": "پانی اور کیچڑ میں پھیلنے والا موٹا تنا",
+            "color_and_features": "پانی والی جگہوں پر تیزی سے پھیلتی ہے"
+          },
+          "common_diseases_and_issues": ["پتوں کا جلساؤ"]
+        },
+        {
+          "id": "f_018",
+          "name_urdu": "گنی گھاس",
+          "type": "سدا بہار گھاس",
+          "visual_identification": {
+            "leaf_pattern": "لمبے تیز کنارے والے پتے",
+            "stem_structure": "بڑا جھاڑ نما گچھا",
+            "color_and_features": "اونچی گھاس"
+          },
+          "common_diseases_and_issues": ["پتوں کے داغ"]
+        },
+        {
+          "id": "f_019",
+          "name_urdu": "بلو پینک گھاس",
+          "type": "صحرائی/خشک گھاس",
+          "visual_identification": {
+            "leaf_pattern": "نیلگوں سبز پتے",
+            "stem_structure": "سخت تنا",
+            "color_and_features": "کم پانی میں اگنے والی"
+          },
+          "common_diseases_and_issues": ["خشکی"]
+        },
+        {
+          "id": "f_020",
+          "name_urdu": "دھاب گھاس",
+          "type": "جنگلی گھاس",
+          "visual_identification": {
+            "leaf_pattern": "انتہائی سخت، تیز اور دھار دار پتے",
+            "stem_structure": "مضبوط گچھا",
+            "color_and_features": "خشک علاقوں میں بنتی ہے"
+          },
+          "common_diseases_and_issues": ["کوئی نہیں"]
+        },
+        {
+          "id": "f_021",
+          "name_urdu": "سائنوجن / کھبل",
+          "type": "کھیتوں کی گھاس",
+          "visual_identification": {
+            "leaf_pattern": "باریک نرم پتے",
+            "stem_structure": "نرم شاخیں",
+            "color_and_features": "سبز"
+          },
+          "common_diseases_and_issues": ["کیڑے"]
+        },
+        {
+          "id": "f_022",
+          "name_urdu": "سنبل گھاس",
+          "type": "چرگاہ گھاس",
+          "visual_identification": {
+            "leaf_pattern": "سخت نوکدار پتے",
+            "stem_structure": "باریک تنا",
+            "color_and_features": "کانٹے دار بیج"
+          },
+          "common_diseases_and_issues": ["کوئی نہیں"]
+        },
+        {
+          "id": "f_023",
+          "name_urdu": "کانس گھاس",
+          "type": "دریائی گھاس",
+          "visual_identification": {
+            "leaf_pattern": "کماد جیسے باریک لمبے پتے",
+            "stem_structure": "سخت اور اونچا",
+            "color_and_features": "سفید ریشمی پھول کا گچھا"
+          },
+          "common_diseases_and_issues": ["کوئی نہیں"]
+        },
+        {
+          "id": "f_024",
+          "name_urdu": "ڈیلا گھاس",
+          "type": "جڑی بوٹی / گھاس",
+          "visual_identification": {
+            "leaf_pattern": "تین کونوں والے چمکدار نوکدار پتے",
+            "stem_structure": "تکونا تنا (Triangular)",
+            "color_and_features": "زیر زمین کالی گانٹھیں (Tubers) ہوتی ہیں"
+          },
+          "common_diseases_and_issues": ["کھیتوں کی ضدی جڑی بوٹی"]
+        },
+        {
+          "id": "f_025",
+          "name_urdu": "سربالی",
+          "type": "چارہ و جڑی بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "باریک لمبوترے پتے",
+            "stem_structure": "نرم تنا",
+            "color_and_features": "گلابی یا سفید لمبا سٹا"
+          },
+          "common_diseases_and_issues": ["فنگس"]
+        },
+        {
+          "id": "f_026",
+          "name_urdu": "سواٹو گھاس",
+          "type": "مرطوب گھاس",
+          "visual_identification": {
+            "leaf_pattern": "چاول کے پودے جیسی پتے",
+            "stem_structure": "نرم شاخ دار",
+            "color_and_features": "پانی کے قریب االٹی ہے"
+          },
+          "common_diseases_and_issues": ["کیڑے"]
+        },
+        {
+          "id": "f_027",
+          "name_urdu": "باجرہ نیپیئر ہائبرڈ",
+          "type": "جدید چارہ",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے، طویل اور نرم پتے",
+            "stem_structure": "مضبوط اور تیزی سے کٹائی دینے والا تنا",
+            "color_and_features": "گہرا سبز، کماد کی طرح گچھے میں اگتا ہے"
+          },
+          "common_diseases_and_issues": ["سُنڈی", "پتوں کے سوراخ"]
+        },
+        {
+          "id": "f_028",
+          "name_urdu": "جنگلی جئی / برائی",
+          "type": "خودرو گھاس / جڑی بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "عام جئی جیسا لیکن زیادہ باریک",
+            "stem_structure": "نازک کھوکھلا تنا",
+            "color_and_features": "گندم کے کھیتوں میں اگنے والی ضدی گھاس"
+          },
+          "common_diseases_and_issues": ["کنگئی"]
+        }
+      ]
+    },
+    {
+      "category_id": "vegetables",
+      "category_name_urdu": "سبزیاں (تمام مقامی و کاروباری)",
+      "items": [
+        {
+          "id": "v_001",
+          "name_urdu": "آلو",
+          "type": "زیر زمین سبزی",
+          "visual_identification": {
+            "leaf_pattern": "مجموعی پتے جن میں چھوٹے بڑے پتک ہوتے ہیں",
+            "stem_structure": "جھاڑی دار سبز پودا",
+            "color_and_features": "سفید یا جامنی پھول، نیچے آلو بنتے ہیں"
+          },
+          "common_diseases_and_issues": ["ارلی بلائٹ", "لیٹ بلائٹ (Late Blight)", "وائرس"]
+        },
+        {
+          "id": "v_002",
+          "name_urdu": "پیاز",
+          "type": "گنڈے والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "گول کھوکھلے پائپ جیسے پتے",
+            "stem_structure": "پتوں کا نچلا حصہ گنڈا بناتا ہے",
+            "color_and_features": "سبز نالی دار پتے"
+          },
+          "common_diseases_and_issues": ["پرپل بلاچ (Purple Blotch)", "تھرپس (Thrips)"]
+        },
+        {
+          "id": "v_003",
+          "name_urdu": "ٹماٹر",
+          "type": "پھل سبزی",
+          "visual_identification": {
+            "leaf_pattern": "کٹے ہوئے اور تیز بو والے پتے",
+            "stem_structure": "روئیں دار نازک تنا",
+            "color_and_features": "پیلے پھول، پہلے سبز پھر سرخ پھل"
+          },
+          "common_diseases_and_issues": ["پتہ مروڑ وائرس", "لیٹ بلائٹ", "پھل کا گلنا"]
+        },
+        {
+          "id": "v_004",
+          "name_urdu": "خیرا",
+          "type": "بیل والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "پنچ کونے کھردے پتے",
+            "stem_structure": "باریک دھاگوں (Tendrils) والی بیل",
+            "color_and_features": "پیلے پھول، لمبا سبز پھل"
+          },
+          "common_diseases_and_issues": ["ڈاؤن ملڈیو", "پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "v_005",
+          "name_urdu": "ہری مرچ",
+          "type": "مصالحہ جات سبزی",
+          "visual_identification": {
+            "leaf_pattern": "ہموار، چمکدار نوکدار پتے",
+            "stem_structure": "جھاڑی دار شاخیں",
+            "color_and_features": "سفید چھوٹے پھول، لمبی سبز مرچ"
+          },
+          "common_diseases_and_issues": ["پتہ مروڑ وائرس (Leaf Curl)", "تھرپس", "جھلسنا"]
+        },
+        {
+          "id": "v_006",
+          "name_urdu": "سرخ مرچ",
+          "type": "مصالحہ جات",
+          "visual_identification": {
+            "leaf_pattern": "ہری مرچ جیسی ہی رنگت",
+            "stem_structure": "جھاڑی دار",
+            "color_and_features": "پکنے پر چمکیلی سرخ"
+          },
+          "common_diseases_and_issues": ["انتھراکنوز (Anthracnose)", "وائرس"]
+        },
+        {
+          "id": "v_007",
+          "name_urdu": "شملہ مرچ",
+          "type": "سبزی",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے ہموار سبز پتے",
+            "stem_structure": "مضبوط سیدھی شاخیں",
+            "color_and_features": "مربع شکل کا موٹا پھل"
+          },
+          "common_diseases_and_issues": ["پھل کی سڑن", "سفید مکھی"]
+        },
+        {
+          "id": "v_008",
+          "name_urdu": "لہسن",
+          "type": "گنڈے دار سبزی",
+          "visual_identification": {
+            "leaf_pattern": "پیاز کے برعکس چپٹے اور چوڑے پتے",
+            "stem_structure": "سیدھا پودا",
+            "color_and_features": "نیچے لہسن کی تریاں بنتی ہیں"
+          },
+          "common_diseases_and_issues": ["تھرپس", "پتوں کا پیلاپن"]
+        },
+        {
+          "id": "v_009",
+          "name_urdu": "ادراک",
+          "type": "جڑ والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "باریک لمبے نوکدار پتے",
+            "stem_structure": "سرکنڈے جیسا چھوٹا پودا",
+            "color_and_features": "زیر زمین ادراک کی گانٹھ"
+          },
+          "common_diseases_and_issues": ["جڑ کا گلنا (Soft Rot)"]
+        },
+        {
+          "id": "v_010",
+          "name_urdu": "بینگن",
+          "type": "سبزی",
+          "visual_identification": {
+            "leaf_pattern": "بہت بڑے کھردے اور بعض اوقات کانٹے دار پتے",
+            "stem_structure": "مضبوط جھاڑی",
+            "color_and_features": "جامنی پھول، جامنی یا لمبا پھل"
+          },
+          "common_diseases_and_issues": ["تنے اور پھل کا سوراخ کرنے والا کیڑا"]
+        },
+        {
+          "id": "v_011",
+          "name_urdu": "بھنڈی",
+          "type": "سبزی",
+          "visual_identification": {
+            "leaf_pattern": "بڑے ہاتھ کے پنجے جیسے کٹے پتے",
+            "stem_structure": "سیدھا اونچا تنا",
+            "color_and_features": "پیلا پھول جس کا اندرونی حصہ ارغوانی ہوتا ہے"
+          },
+          "common_diseases_and_issues": ["پیلا موزیک وائرس", "جسڈ"]
+        },
+        {
+          "id": "v_012",
+          "name_urdu": "کدو / لوکی",
+          "type": "بیل والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "گول اور نرم مخملی پتے",
+            "stem_structure": "مضبوط پھیلاؤ والی بیل",
+            "color_and_features": "سفید بڑے پھول، لمبا یا گول سبز کدو"
+          },
+          "common_diseases_and_issues": ["ریڈ بیٹل (Red Pumpkin Beetle)"]
+        },
+        {
+          "id": "v_013",
+          "name_urdu": "توری",
+          "type": "بیل والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "کونے دار گہرے سبز پتے",
+            "stem_structure": "باریک بیل",
+            "color_and_features": "چمکیلے پیلے پھول، دھاری دار لمبی توری"
+          },
+          "common_diseases_and_issues": ["پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "v_014",
+          "name_urdu": "کریلا",
+          "type": "بیل والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "بہت باریک کٹے ہوئے پیالے نما پتے",
+            "stem_structure": "پتلی نازک بیل",
+            "color_and_features": "چھوٹے پیلے پھول، کانٹے دار کھردرا پھل"
+          },
+          "common_diseases_and_issues": ["فرُوٹ فلائی (Fruit Fly)"]
+        },
+        {
+          "id": "v_015",
+          "name_urdu": "حلوہ کدو / پیٹھا",
+          "type": "بیل والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "بہت بڑے کھردے پتے",
+            "stem_structure": "زمین پر بچھنے والی موٹی بیل",
+            "color_and_features": "بڑے پیلے پھول، بڑا گول یا ڈبے نما پھل"
+          },
+          "common_diseases_and_issues": ["پھل کی مکھی"]
+        },
+        {
+          "id": "v_016",
+          "name_urdu": "پھول گوبھی",
+          "type": "گوبھی کی قسم",
+          "visual_identification": {
+            "leaf_pattern": "لمبے چوڑے گہرے سبز پتے",
+            "stem_structure": "درمیان میں سفید پھول بنتا ہے",
+            "color_and_features": "سفید گٹھا ہوا پھول"
+          },
+          "common_diseases_and_issues": ["ڈاؤن ملڈیو", "سُنڈی"]
+        },
+        {
+          "id": "v_017",
+          "name_urdu": "بند گوبھی",
+          "type": "گوبھی کی قسم",
+          "visual_identification": {
+            "leaf_pattern": "گول چوڑے پتے جو ایک دوسرے کے اوپر لپٹتے ہیں",
+            "stem_structure": "گول بند گیند نما پودا",
+            "color_and_features": "سبز یا چمکدار پتے"
+          },
+          "common_diseases_and_issues": ["کٹر ورم", "بلیک روٹ"]
+        },
+        {
+          "id": "v_018",
+          "name_urdu": "بروکلی",
+          "type": "گوبھی کی قسم",
+          "visual_identification": {
+            "leaf_pattern": "پھول گوبھی جیسے پتے",
+            "stem_structure": "درمیان میں گہرا سبز پھول",
+            "color_and_features": "گہرا سبز پھول"
+          },
+          "common_diseases_and_issues": ["سُنڈی"]
+        },
+        {
+          "id": "v_019",
+          "name_urdu": "مٹر",
+          "type": "پھلی دار سبزی",
+          "visual_identification": {
+            "leaf_pattern": "گول چھوٹے پتے جن کے آگے بیل کی طرح مونچھیں ہوتی ہیں",
+            "stem_structure": "نازک کمزور تنا",
+            "color_and_features": "سفید پھول، دانوں سے بھری سبز پھلی"
+          },
+          "common_diseases_and_issues": ["پاؤڈری ملڈیو (Powdery Mildew)", "تیلا"]
+        },
+        {
+          "id": "v_020",
+          "name_urdu": "گاجر",
+          "type": "جڑ والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "باریک، ریشے دار اور جالی نما پتے",
+            "stem_structure": "پتوں کا گچھا اوپر، جڑ نیچے",
+            "color_and_features": "سرخ یا نارنجی جڑ"
+          },
+          "common_diseases_and_issues": ["جڑ کا پھٹنا", "کیویٹی اسپاٹ"]
+        },
+        {
+          "id": "v_021",
+          "name_urdu": "مولی",
+          "type": "جڑ والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "کھردے اور کٹے ہوئے بڑے پتے",
+            "stem_structure": "سفید جڑ زمین میں",
+            "color_and_features": "سفید لمبی جڑ"
+          },
+          "common_diseases_and_issues": ["الٹرنیریا بلائٹ"]
+        },
+        {
+          "id": "v_022",
+          "name_urdu": "شپلم / شلجم",
+          "type": "جڑ والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "مولی سے ملتے جلتے مگر کم کھردے",
+            "stem_structure": "گول جڑ",
+            "color_and_features": "سفید اور جامنی جڑ"
+          },
+          "common_diseases_and_issues": ["پتوں کی سنڈی"]
+        },
+        {
+          "id": "v_023",
+          "name_urdu": "پالک",
+          "type": "پتوں والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے، نرم اور گوشت پوست والے پتے",
+            "stem_structure": "نرم ڈنڈیاں",
+            "color_and_features": "گہرا سبز رنگ"
+          },
+          "common_diseases_and_issues": ["ڈاؤن ملڈیو", "پتوں پر سوراخ"]
+        },
+        {
+          "id": "v_024",
+          "name_urdu": "میتھی",
+          "type": "پتوں والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے گول تین تین پتوں کا سیٹ",
+            "stem_structure": "نرم پتلا تنا",
+            "color_and_features": "خوشبودار پودا، پیلے پھول"
+          },
+          "common_diseases_and_issues": ["پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "v_025",
+          "name_urdu": "دھنیا",
+          "type": "جڑی بوٹی / مصالحہ",
+          "visual_identification": {
+            "leaf_pattern": "باریک کٹے ہوئے چمکدار پتے",
+            "stem_structure": "نازک شاخیں",
+            "color_and_features": "تیز خوشبو، چھوٹے سفید پھول"
+          },
+          "common_diseases_and_issues": ["سٹیم گال (Stem Gall)"]
+        },
+        {
+          "id": "v_026",
+          "name_urdu": "پودینہ",
+          "type": "جڑی بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے دندانے دار نوکدار پتے",
+            "stem_structure": "چار کونوں والا نرم تنا",
+            "color_and_features": "شدید تیز خوشبو"
+          },
+          "common_diseases_and_issues": ["زنگ (Rust)"]
+        },
+        {
+          "id": "v_027",
+          "name_urdu": "چقندر",
+          "type": "جڑ والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے چمکدار پتے جن میں سرخ رگیں ہوتی ہیں",
+            "stem_structure": "سرخ ڈنڈیاں",
+            "color_and_features": "گہرا ارغوانی/سرخ جڑ"
+          },
+          "common_diseases_and_issues": ["پتوں کے دھبے"]
+        },
+        {
+          "id": "v_028",
+          "name_urdu": "ٹنڈا / تینسی",
+          "type": "بیل والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "کٹے ہوئے کھردے پتے",
+            "stem_structure": "روئیں دار بیل",
+            "color_and_features": "چھوٹے گول سبز پھل"
+          },
+          "common_diseases_and_issues": ["پھل کی مکھی"]
+        },
+        {
+          "id": "v_029",
+          "name_urdu": "اروی / کچالو",
+          "type": "جڑ والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "بہت بڑے ہاتھی کے کان جیسے پتے (Elephant Ear)",
+            "stem_structure": "پتوں کی لمبی موٹی ڈنڈیاں",
+            "color_and_features": "پانی کو اوپر نہیں ٹھہرنے دیتے"
+          },
+          "common_diseases_and_issues": ["پتوں کا جلساؤ"]
+        },
+        {
+          "id": "v_030",
+          "name_urdu": "سوہانجنا",
+          "type": "طبی سبزی / درخت",
+          "visual_identification": {
+            "leaf_pattern": "بہت چھوٹے گول پر نما پتے",
+            "stem_structure": "درخت نما تنا",
+            "color_and_features": "سفید پھول اور لمبی پھلیاں"
+          },
+          "common_diseases_and_issues": ["پتوں کی سنڈی"]
+        },
+        {
+          "id": "v_031",
+          "name_urdu": "شکر قندی",
+          "type": "جڑ والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "دل کی شکل یا کٹے ہوئے پتے",
+            "stem_structure": "زمین پر بچھنے والی بیل",
+            "color_and_features": "زیر زمین میٹھی جڑ"
+          },
+          "common_diseases_and_issues": ["ویول (Weevil)"]
+        },
+        {
+          "id": "v_032",
+          "name_urdu": "کچنار",
+          "type": "درخت سبزی",
+          "visual_identification": {
+            "leaf_pattern": "اونٹ کے کھر کی شکل کے دو حصوں میں کٹے پتے",
+            "stem_structure": "درخت",
+            "color_and_features": "خوبصورت جامنی/سفید کلیاں جو سبزی بنتی ہیں"
+          },
+          "common_diseases_and_issues": ["کیڑے"]
+        },
+        {
+          "id": "v_033",
+          "name_urdu": "گوار پھلی",
+          "type": "سبزی",
+          "visual_identification": {
+            "leaf_pattern": "دندانے دار پتے",
+            "stem_structure": "سخت پودا",
+            "color_and_features": "گچھوں میں بننے والی پھلیاں"
+          },
+          "common_diseases_and_issues": ["بلائٹ"]
+        },
+        {
+          "id": "v_034",
+          "name_urdu": "کیکر دیسی / باڑھ سبزیاں",
+          "type": "حفاظتی پودے",
+          "visual_identification": {
+            "leaf_pattern": "باریک کانٹے دار شاخیں",
+            "stem_structure": "سخت جھاڑی",
+            "color_and_features": "کھیتوں کی باڑھ"
+          },
+          "common_diseases_and_issues": ["کوئی خاص نہیں"]
+        },
+        {
+          "id": "v_035",
+          "name_urdu": "ہلدی",
+          "type": "مصالحہ / جڑ سبزی",
+          "visual_identification": {
+            "leaf_pattern": "ادراک جیسے مگر زیادہ چوڑے اور لمبوترے پتے",
+            "stem_structure": "سیدھی لمبی شاخیں",
+            "color_and_features": "زیر زمین سنہری پیلی جڑ"
+          },
+          "common_diseases_and_issues": ["جڑ کی سڑن", "پتوں کے داغ"]
+        },
+        {
+          "id": "v_036",
+          "name_urdu": "سلاد پتا / لیٹس",
+          "type": "پتوں والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "لہراتے ہوئے نازک، نرم اور چمکدار پیلے-سبز پتے",
+            "stem_structure": "پتوں کا بچھونا",
+            "color_and_features": "خام کھانے کے لیے استعمال ہونے والے پتے"
+          },
+          "common_diseases_and_issues": ["تیلا", "ڈاؤن ملڈیو"]
+        },
+        {
+          "id": "v_037",
+          "name_urdu": "چمچور / ہالوں",
+          "type": "پتوں والی طبی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "باریک اور کٹے ہوئے نوکدار پتے",
+            "stem_structure": "نازک نرم تنا",
+            "color_and_features": "تیز ذائقہ دار پتے"
+          },
+          "common_diseases_and_issues": ["تیلا"]
+        },
+        {
+          "id": "v_038",
+          "name_urdu": "کاہو",
+          "type": "پتوں والی سبزی",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے، نرم اور ملائم پتے",
+            "stem_structure": "نرم تنا",
+            "color_and_features": "سبز رنگ"
+          },
+          "common_diseases_and_issues": ["فنگس"]
+        },
+        {
+          "id": "v_039",
+          "name_urdu": "گھیا توری",
+          "type": "بیل سبزی",
+          "visual_identification": {
+            "leaf_pattern": "توری کی طرح کے چوڑے پتے",
+            "stem_structure": "مضبوط بیل",
+            "color_and_features": "ہموار چھلکے والی لمبی توری"
+          },
+          "common_diseases_and_issues": ["پھل کی مکھی"]
+        },
+        {
+          "id": "v_040",
+          "name_urdu": "چھپکن کدو / زچینی",
+          "type": "سبزی",
+          "visual_identification": {
+            "leaf_pattern": "بڑے، گہرے کٹے اور داغ دار پتے",
+            "stem_structure": "جھاڑی دار کم پھیلاؤ والی بیل",
+            "color_and_features": "لمبا یا گول گہرا سبز/پیلا پھل"
+          },
+          "common_diseases_and_issues": ["پاؤڈری ملڈیو", "وائرس"]
+        }
+      ]
+    },
+    {
+      "category_id": "fruits_and_orchards",
+      "category_name_urdu": "پھل اور باغات",
+      "items": [
+        {
+          "id": "fr_001",
+          "name_urdu": "آم",
+          "type": "پھل دار درخت",
+          "visual_identification": {
+            "leaf_pattern": "لمبے، سخت، چمکدار نوکدار پتے",
+            "stem_structure": "بڑا مضبوط لکڑی دار درخت",
+            "color_and_features": "نئے پتے ارغوانی/سرخ، بعد میں گہرے سبز"
+          },
+          "common_diseases_and_issues": ["اینتھراکنوز (Anthracnose)", "پاؤڈری ملڈیو", "مینگو ہوپر"]
+        },
+        {
+          "id": "fr_002",
+          "name_urdu": "کینو / مالٹا / فروٹر",
+          "type": "ترشادہ پھل (Citrus)",
+          "visual_identification": {
+            "leaf_pattern": "درمیانے چمکدار پتے جن کی ڈنڈی پر چھوٹے پر (Wings) ہوتے ہیں",
+            "stem_structure": "کانٹے دار شاخیں",
+            "color_and_features": "سفید خوشبودار پھول، نارنجی پھل"
+          },
+          "common_diseases_and_issues": ["سٹرس کینکر (Citrus Canker)", "پتہ سرنگ بنانے والا کیڑا (Leaf Miner)"]
+        },
+        {
+          "id": "fr_003",
+          "name_urdu": "لیموں / میٹھا",
+          "type": "ترشادہ پھل",
+          "visual_identification": {
+            "leaf_pattern": "کینو سے چھوٹے پتے",
+            "stem_structure": "تیز تیز کانٹے",
+            "color_and_features": "سفید پھول، پیلا/سبز پھل"
+          },
+          "common_diseases_and_issues": ["کینکر", "پتوں کا پیلاپن"]
+        },
+        {
+          "id": "fr_004",
+          "name_urdu": "امرود",
+          "type": "پھل دار درخت",
+          "visual_identification": {
+            "leaf_pattern": "ابھری ہوئی رگوں والے کھردے لمبوترے پتے",
+            "stem_structure": "ہموار چھال والا تنا جو اترتا رہتا ہے",
+            "color_and_features": "سفید پھول، سبز اور پیلا پھل"
+          },
+          "common_diseases_and_issues": ["امرود کا سوکھا (Guava Wilt)", "پھل کی مکھی"]
+        },
+        {
+          "id": "fr_005",
+          "name_urdu": "انار",
+          "type": "جھاڑی/درخت",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے، چمکدار اور باریک پتے",
+            "stem_structure": "باریک کانٹے دار شاخیں",
+            "color_and_features": "سرخ چمکدار پھول"
+          },
+          "common_diseases_and_issues": ["انار کا پھٹنا (Fruit Cracking)", "بیکٹیریل بلائٹ"]
+        },
+        {
+          "id": "fr_006",
+          "name_urdu": "کھجور",
+          "type": "کھجور کا درخت",
+          "visual_identification": {
+            "leaf_pattern": "بہت لمبے، سخت، کانٹے دار پنکھے نما پتے (Fronds)",
+            "stem_structure": "سیدھا اونچا تنا جس پر پرانے پتوں کے نشان ہوتے ہیں",
+            "color_and_features": "گچھوں میں لگتا پھل"
+          },
+          "common_diseases_and_issues": ["تنے کا گھن (Red Palm Weevil)", "پھل کا گلنا"]
+        },
+        {
+          "id": "fr_007",
+          "name_urdu": "سیب",
+          "type": "پہاڑی پھل",
+          "visual_identification": {
+            "leaf_pattern": "بیضوی دندانے دار پتے",
+            "stem_structure": "مضبوط درخت",
+            "color_and_features": "سفید اور گلابی پھول"
+          },
+          "common_diseases_and_issues": ["سیب کا داغ (Apple Scab)", "کوڈلنگ موتھ"]
+        },
+        {
+          "id": "fr_008",
+          "name_urdu": "کیلا",
+          "type": "پودا",
+          "visual_identification": {
+            "leaf_pattern": "انتہائی بڑے اور چوڑے پتے جو ہوا سے پھٹ جاتے ہیں",
+            "stem_structure": "نرم تنا (Pseudostem)",
+            "color_and_features": "بڑا ارغوانی دل نما پھول کا گچھا"
+          },
+          "common_diseases_and_issues": ["بنچی ٹاپ وائرس (BBTV)", "پناؤما بیماری"]
+        },
+        {
+          "id": "fr_009",
+          "name_urdu": "انگور",
+          "type": "بیل",
+          "visual_identification": {
+            "leaf_pattern": "پنجہ نما بڑے کٹے ہوئے پتے",
+            "stem_structure": "لکڑی دار لمبی بیل",
+            "color_and_features": "گچھوں میں پھل"
+          },
+          "common_diseases_and_issues": ["ڈاؤن ملڈیو", "پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "fr_010",
+          "name_urdu": "آڑو",
+          "type": "پہاڑی پھل",
+          "visual_identification": {
+            "leaf_pattern": "تلوار کی شکل کے لمبے پتے",
+            "stem_structure": "درمیانہ درخت",
+            "color_and_features": "بہار میں گلابی پھول"
+          },
+          "common_diseases_and_issues": ["پتہ مروڑ (Leaf Curl)"]
+        },
+        {
+          "id": "fr_011",
+          "name_urdu": "آلوچہ / آلو بخارا",
+          "type": "پہاڑی پھل",
+          "visual_identification": {
+            "leaf_pattern": "بیضوی چھوٹے پتے",
+            "stem_structure": "درخت",
+            "color_and_features": "سفید پھول"
+          },
+          "common_diseases_and_issues": ["شارکا وائرس"]
+        },
+        {
+          "id": "fr_012",
+          "name_urdu": "خوبانی",
+          "type": "پہاڑی پھل",
+          "visual_identification": {
+            "leaf_pattern": "گول نوکدار پتے",
+            "stem_structure": "درخت",
+            "color_and_features": "سفید پھول، نارنجی پھل"
+          },
+          "common_diseases_and_issues": ["شاٹ ہول بیماری"]
+        },
+        {
+          "id": "fr_013",
+          "name_urdu": "تربوز",
+          "type": "بیل پھل",
+          "visual_identification": {
+            "leaf_pattern": "گہرے کٹے ہوئے کھردے پتے",
+            "stem_structure": "زمین پر بچھنے والی موٹی بیل",
+            "color_and_features": "بڑا گول سبز پھل"
+          },
+          "common_diseases_and_issues": ["فیوزیریم وِلٹ", "پھل کی مکھی"]
+        },
+        {
+          "id": "fr_014",
+          "name_urdu": "خربوزہ / گرما / سردا",
+          "type": "بیل پھل",
+          "visual_identification": {
+            "leaf_pattern": "گول نرم پتے",
+            "stem_structure": "زمین پر پھیلنے والی بیل",
+            "color_and_features": "پیلے پھول، پیلا/دھاری دار پھل"
+          },
+          "common_diseases_and_issues": ["پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "fr_015",
+          "name_urdu": "پپیتا",
+          "type": "پودا/درخت",
+          "visual_identification": {
+            "leaf_pattern": "بہت بڑے کٹے ہوئے چھتری نما پتے",
+            "stem_structure": "سیدھا کھوکھلا تنا",
+            "color_and_features": "تنے کے ساتھ جڑے ہوئے پھل"
+          },
+          "common_diseases_and_issues": ["پپیتا رنگ اسپاٹ وائرس (PRSV)"]
+        },
+        {
+          "id": "fr_016",
+          "name_urdu": "فالسہ",
+          "type": "جھاڑی",
+          "visual_identification": {
+            "leaf_pattern": "گول، دل کی شکل کے کھردے پتے",
+            "stem_structure": "جھاڑی دار شاخیں",
+            "color_and_features": "چھوٹے ارغوانی بیری نما پھل"
+          },
+          "common_diseases_and_issues": ["پتوں کے دھبے"]
+        },
+        {
+          "id": "fr_017",
+          "name_urdu": "جامن",
+          "type": "درخت",
+          "visual_identification": {
+            "leaf_pattern": "موٹے، چمکدار، گہرے سبز پتے جن کی خوشبو ہوتی ہے",
+            "stem_structure": "بڑا اونچا درخت",
+            "color_and_features": "کالے جامنی لمبوترے پھل"
+          },
+          "common_diseases_and_issues": ["پھل کی مکھی"]
+        },
+        {
+          "id": "fr_018",
+          "name_urdu": "انجیر",
+          "type": "درخت",
+          "visual_identification": {
+            "leaf_pattern": "بڑے پنجے نما کٹے ہوئے پتے",
+            "stem_structure": "نرم لکڑی کا درخت",
+            "color_and_features": "تنے پر ڈائریکٹ پھل بنتا ہے"
+          },
+          "common_diseases_and_issues": ["انجیر کا زنگ"]
+        },
+        {
+          "id": "fr_019",
+          "name_urdu": "زیتون",
+          "type": "درخت",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے، باریک، اوپر سے گہرے سبز اور نیچے سے چاندی جیسے پتے",
+            "stem_structure": "سخت لکڑی",
+            "color_and_features": "چھوٹے زیتون کے پھل"
+          },
+          "common_diseases_and_issues": ["پیکاک اسپاٹ (Peacock Spot)"]
+        },
+        {
+          "id": "fr_020",
+          "name_urdu": "سٹرابیری",
+          "type": "چھوٹا پودا",
+          "visual_identification": {
+            "leaf_pattern": "تین دندانے دار گہرے سبز پتے",
+            "stem_structure": "زمین کے ساتھ بچھنے والا پودا",
+            "color_and_features": "سفید پھول، سرخ دل نما پھل"
+          },
+          "common_diseases_and_issues": ["گولڈن اسپاٹ", "پھل کا گلنا"]
+        },
+        {
+          "id": "fr_021",
+          "name_urdu": "لوکاٹ",
+          "type": "درخت",
+          "visual_identification": {
+            "leaf_pattern": "بہت بڑے، لمبوترے اور نیچے سے روئیں دار سخت پتے",
+            "stem_structure": "سایہ دار درخت",
+            "color_and_features": "پیلے چھوٹے پھل گچھوں میں"
+          },
+          "common_diseases_and_issues": ["سکیکب (Scab)"]
+        },
+        {
+          "id": "fr_022",
+          "name_urdu": "چیری",
+          "type": "پہاڑی پھل",
+          "visual_identification": {
+            "leaf_pattern": "بیضوی دندانے دار پتے",
+            "stem_structure": "درخت",
+            "color_and_features": "خوبصورت سفید پھول، سرخ چمکدار پھل"
+          },
+          "common_diseases_and_issues": ["پرندوں کا حملہ", "پھل کا پھٹنا"]
+        },
+        {
+          "id": "fr_023",
+          "name_urdu": "بادام",
+          "type": "گری دار درخت",
+          "visual_identification": {
+            "leaf_pattern": "آڑو جیسے باریک لمبے پتے",
+            "stem_structure": "مضبوط درخت",
+            "color_and_features": "بہار میں سفید پھول"
+          },
+          "common_diseases_and_issues": ["شاٹ ہول"]
+        },
+        {
+          "id": "fr_024",
+          "name_urdu": "اخروٹ",
+          "type": "پہاڑی گری دار",
+          "visual_identification": {
+            "leaf_pattern": "بڑے مجموعی پتے تیز بو والے",
+            "stem_structure": "بہت بڑا اور اونچا درخت",
+            "color_and_features": "سبز چھلکے میں بند اخروٹ"
+          },
+          "common_diseases_and_issues": ["بلائٹ"]
+        },
+        {
+          "id": "fr_025",
+          "name_urdu": "پستہ",
+          "type": "پہاڑی گری دار",
+          "visual_identification": {
+            "leaf_pattern": "گول موٹے پتے",
+            "stem_structure": "چھوٹا درخت",
+            "color_and_features": "گچھوں میں لگتا پھل"
+          },
+          "common_diseases_and_issues": ["فنگس"]
+        },
+        {
+          "id": "fr_026",
+          "name_urdu": "چلغوزہ",
+          "type": "جنگلی صنوبر",
+          "visual_identification": {
+            "leaf_pattern": "سوئی نما باریک نوکدار پتے (Needles)",
+            "stem_structure": "صنوبر کا بڑا درخت",
+            "color_and_features": "مخروطی گاٹھوں (Cones) میں چلغوزے"
+          },
+          "common_diseases_and_issues": ["جنگلی کیڑے"]
+        },
+        {
+          "id": "fr_027",
+          "name_urdu": "بیڑ / سوپاری بیڑ",
+          "type": "صحرائی پھل",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے گول، نیچے سے سفید روئیں دار پتے",
+            "stem_structure": "سخت کانٹے دار شاخیں",
+            "color_and_features": "گول یا لمبے بیر"
+          },
+          "common_diseases_and_issues": ["پاؤڈری ملڈیو"]
+        },
+        {
+          "id": "fr_028",
+          "name_urdu": "شاتوت / توت",
+          "type": "درخت",
+          "visual_identification": {
+            "leaf_pattern": "نرم، دل کی شکل کے یا کٹے ہوئے پتے",
+            "stem_structure": "گھنا سایہ دار درخت",
+            "color_and_features": "لمبے سفید، سرخ یا کالے توت"
+          },
+          "common_diseases_and_issues": ["پتوں کے دھبے"]
+        },
+        {
+          "id": "fr_029",
+          "name_urdu": "نَشپاتی",
+          "type": "پہاڑی پھل",
+          "visual_identification": {
+            "leaf_pattern": "چمکدار بیضوی پتے",
+            "stem_structure": "سیدھا اونچا درخت",
+            "color_and_features": "سفید پھول، ناشپاتی پھل"
+          },
+          "common_diseases_and_issues": ["فائر بلائٹ (Fire Blight)"]
+        },
+        {
+          "id": "fr_030",
+          "name_urdu": "ناریل",
+          "type": "سائل پودا",
+          "visual_identification": {
+            "leaf_pattern": "بہت لمبے پر نما پتے",
+            "stem_structure": "لمبا بغیر شاخ کا تنا",
+            "color_and_features": "اوپر ناریل کے گچھے"
+          },
+          "common_diseases_and_issues": ["ریڈ پام ویول"]
+        },
+        {
+          "id": "fr_031",
+          "name_urdu": "چیکو",
+          "type": "پھل دار درخت",
+          "visual_identification": {
+            "leaf_pattern": "گہرے سبز، چمکدار اور سخت پتے",
+            "stem_structure": "سدا بہار درخت",
+            "color_and_features": "گول مٹیالے رنگ کے میٹھے پھل"
+          },
+          "common_diseases_and_issues": ["پھل کی مکھی"]
+        },
+        {
+          "id": "fr_032",
+          "name_urdu": "شریفہ",
+          "type": "پھل دار درخت",
+          "visual_identification": {
+            "leaf_pattern": "بیضوی نرم پتے",
+            "stem_structure": "چھوٹا درخت",
+            "color_and_features": "خانہ دار کھردرا سبز پھل"
+          },
+          "common_diseases_and_issues": ["میلی بگ (Mealybug)"]
+        },
+        {
+          "id": "fr_033",
+          "name_urdu": "جنگلی جلیبی",
+          "type": "درخت پھل",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے دو جڑے ہوئے پتے",
+            "stem_structure": "کانٹے دار لمبی شاخیں",
+            "color_and_features": "جلیبی نما مڑی ہوئی سرخ/سفید پھلیاں"
+          },
+          "common_diseases_and_issues": ["کوئی خاص نہیں"]
+        },
+        {
+          "id": "fr_034",
+          "name_urdu": "لیکو / لیچی",
+          "type": "پھل دار درخت",
+          "visual_identification": {
+            "leaf_pattern": "چمکدار لمبوترے نوکدار گہرے سبز پتے",
+            "stem_structure": "سایہ دار بڑا درخت",
+            "color_and_features": "سرخ چھلکے اور سفید گودے والا پھل"
+          },
+          "common_diseases_and_issues": ["پھل کا پھٹنا", "لیچی مائٹ"]
+        },
+        {
+          "id": "fr_035",
+          "name_urdu": "املوک / جاپانی پھل (Persimmon)",
+          "type": "پہاڑی پھل",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے، چمکدار اور بڑے پتے",
+            "stem_structure": "درمیانہ درخت",
+            "color_and_features": "نارنجی ٹماٹر کی شکل کا میٹھا پھل"
+          },
+          "common_diseases_and_issues": ["پھل گرنا", "فنگس"]
+        }
+      ]
+    },
+    {
+      "category_id": "weeds_and_field_herbs",
+      "category_name_urdu": "کھیتوں کی جڑی بوٹیاں اور جونیئر پودے",
+      "items": [
+        {
+          "id": "w_001",
+          "name_urdu": "دمبی سٹا / جُندلی",
+          "type": "گندم کی جڑی بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "گندم جیسے پتے مگر تنے کا نچلا حصہ سرخ/گلابی ہوتا ہے",
+            "stem_structure": "باریک گچھا",
+            "color_and_features": "سخت لٹکتا ہوا لمبا سٹا"
+          },
+          "common_diseases_and_issues": ["گندم کی پیداوار کم کرنا"]
+        },
+        {
+          "id": "w_002",
+          "name_urdu": "باتھو",
+          "type": "خودرو جڑی بوٹی / سبزی",
+          "visual_identification": {
+            "leaf_pattern": "بطخ کے پیر کی شکل کے ہلکے سفید پاؤڈر والے پتے",
+            "stem_structure": "نرم شاخیں",
+            "color_and_features": "سبز اور ہلکا چاندی جیسا پاؤڈر"
+          },
+          "common_diseases_and_issues": ["کھیت کی نمی اور غذائیت چوسنا"]
+        },
+        {
+          "id": "w_003",
+          "name_urdu": "جنگلی پالک",
+          "type": "جڑی بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "عام پالک سے تھوڑے لمبوترے اور لال رگوں والے پتے",
+            "stem_structure": "سیدھا تنا",
+            "color_and_features": "سرخ/سبز بیجوں کا سٹا"
+          },
+          "common_diseases_and_issues": ["زمین کی غذائیت ضائع کرنا"]
+        },
+        {
+          "id": "w_004",
+          "name_urdu": "لیہلی / ہرن خوری",
+          "type": "بیل نما جڑی بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "تیر کی شکل کے چھوٹے پتے",
+            "stem_structure": "زمین اور فصل پر لپٹنے والی نازک بیل",
+            "color_and_features": "سفید یا ہلکے گلابی پیالہ نما پھول"
+          },
+          "common_diseases_and_issues": ["فصلوں کو جکڑنا"]
+        },
+        {
+          "id": "w_005",
+          "name_urdu": "مائنہ / مٹر جڑی بوٹی",
+          "type": "فصلی جڑی بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "مٹر جیسے چھوٹے پتے",
+            "stem_structure": "زمین پر بچھنے والی نازک شاخیں",
+            "color_and_features": "پیلے چھوٹے پھول"
+          },
+          "common_diseases_and_issues": ["گندم میں رکاوٹ"]
+        },
+        {
+          "id": "w_006",
+          "name_urdu": "امر بیل / آکاس بیل",
+          "type": "طفیلیا جڑی بوٹی (Parasite)",
+          "visual_identification": {
+            "leaf_pattern": "پتے نہیں ہوتے",
+            "stem_structure": "پیلے یا نارنجی رنگ کی زرد تاریں",
+            "color_and_features": "پودوں پر جال بناتی ہے اور ان کا رس چوس لیتی ہے"
+          },
+          "common_diseases_and_issues": ["پودے کو مکمل سکھا دینا"]
+        },
+        {
+          "id": "w_007",
+          "name_urdu": "آک / مداس",
+          "type": "خودرو زہریلا پودا",
+          "visual_identification": {
+            "leaf_pattern": "بہت موٹے، چوڑے اور چمکیلے پتے",
+            "stem_structure": "لکڑی دار تنا، توڑنے پر سفید دودھ نکلتا ہے",
+            "color_and_features": "سفید اور ارغوانی تاج نما پھول"
+          },
+          "common_diseases_and_issues": ["بنجر زمینوں پر قبضہ"]
+        },
+        {
+          "id": "w_008",
+          "name_urdu": "دھتورا",
+          "type": "خودرو طبی/زہریلا پودا",
+          "visual_identification": {
+            "leaf_pattern": "بڑے، دندانے دار کٹے ہوئے پتے",
+            "stem_structure": "مضبوط شاخ دار پودا",
+            "color_and_features": "سفید یا جامنی لمبا بگل نما پھول، کانٹے دار گول پھل"
+          },
+          "common_diseases_and_issues": ["کھیتوں کی جگہ گھیرنا"]
+        },
+        {
+          "id": "w_009",
+          "name_urdu": "سائنٹیفک گندم جڑی بوٹی (چوڑی پتی)",
+          "type": "جڑی بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "چوڑے پتے جو گندم کو دباتے ہیں",
+            "stem_structure": "نرم تنا",
+            "color_and_features": "کھیت کے اندر سائے کا باعث بننا"
+          },
+          "common_diseases_and_issues": ["پیداوار میں کمی"]
+        },
+        {
+          "id": "w_010",
+          "name_urdu": "جنگلی ہالوں",
+          "type": "خودرو بوٹی",
+          "visual_identification": {
+            "leaf_pattern": "باریک چھوٹے پتے",
+            "stem_structure": "پتلا تنا",
+            "color_and_features": "سفید چھوٹے بیج"
+          },
+          "common_diseases_and_issues": ["فصل کا دم گھوٹنا"]
+        }
+      ]
+    },
+    {
+      "category_id": "medicinal_and_commercial_herbs",
+      "category_name_urdu": "طبی، ادویاتی اور جدید تجارتی پودے",
+      "items": [
+        {
+          "id": "m_001",
+          "name_urdu": "ایلو ویرا / کنوار گندل",
+          "type": "طبی پودا",
+          "visual_identification": {
+            "leaf_pattern": "موٹے، گوشت دار، کانٹے دار کنارے والے پتے جن کے اندر جیل ہوتا ہے",
+            "stem_structure": "تنا نہ ہونے کے برابر، پتے مرکز سے نکلتے ہیں",
+            "color_and_features": "سبز چمکدار پتے، بعض اوقات سفید دھبے"
+          },
+          "common_diseases_and_issues": ["جڑ کا گلنا (زیادہ پانی سے)", "پتوں پر کالے دھبے"]
+        },
+        {
+          "id": "m_002",
+          "name_urdu": "اسپغول",
+          "type": "طبی / تجارتی فصل",
+          "visual_identification": {
+            "leaf_pattern": "باریک، لمبے گھاس جیسے پتے",
+            "stem_structure": "چھوٹا پودا",
+            "color_and_features": "اوپر بیجوں والا سٹا جس سے چھلکا نکلتا ہے"
+          },
+          "common_diseases_and_issues": ["بارش سے بیج جھڑنا", "ڈاؤن ملڈیو"]
+        },
+        {
+          "id": "m_003",
+          "name_urdu": "اسٹیویا / میٹھا پودا",
+          "type": "جدید تجارتی پودا",
+          "visual_identification": {
+            "leaf_pattern": "چھوٹے، بیضوی، دندانے دار چمکدار پتے",
+            "stem_structure": "جھاڑی دار پودا",
+            "color_and_features": "پتوں میں قدرتی شدید مٹھاس ہوتی ہے"
+          },
+          "common_diseases_and_issues": ["تنے کا جلساؤ", "زیادہ گرمی سے سوکھنا"]
+        },
+        {
+          "id": "m_004",
+          "name_urdu": "تلسی / نیاز بو",
+          "type": "طبی / خوشبودار پودا",
+          "visual_identification": {
+            "leaf_pattern": "نرم، چمکدار بیضوی خوشبودار پتے",
+            "stem_structure": "شاخ دار تنا",
+            "color_and_features": "ارغوانی یا سفید چھوٹے پھولوں کا سٹا"
+          },
+          "common_diseases_and_issues": ["پتوں کے دھبے", "تیلا"]
+        },
+        {
+          "id": "m_005",
+          "name_urdu": "لیمن گراس",
+          "type": "طبی / چائے پودا",
+          "visual_identification": {
+            "leaf_pattern": "لمبے، باریک اور تیز کنارے والے گھاس جیسے پتے",
+            "stem_structure": "گچھے کی شکل میں اگتا ہے",
+            "color_and_features": "مسلنے پر لیموں کی شدید خوشبو دیتی ہے"
+          },
+          "common_diseases_and_issues": ["پتوں کی جُلسن (Leaf Blight)"]
+        }
+      ]
+    }
+  ]
+}

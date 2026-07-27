@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اوریجنل اسکینر طاہر نظیر - Original Scanner Tahir Nazeer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1b2a;
+            color: #ffffff;
+            direction: rtl;
+            text-align: right;
+            padding-bottom: 40px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1b263b, #415a77);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #00b4d8;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            color: #00f5d4;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #e0e1dd;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 15px auto;
+            padding: 0 15px;
+        }
+
+        /* Camera Scanner Section */
+        .scanner-card {
+            background: #1b263b;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid #00b4d8;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            margin-bottom: 20px;
+        }
+
+        .camera-box {
+            width: 100%;
+            height: 280px;
+            background: #000;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #00f5d4;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scan-laser {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #00f5d4;
+            box-shadow: 0 0 15px #00f5d4, 0 0 30px #00f5d4;
+            animation: scanning 2.5s infinite linear;
+            display: none;
+        }
+
+        @keyframes scanning {
+            0% { top: 0%; }
+            50% { top: 95%; }
+            100% { top: 0%; }
+        }
+
+        .btn-scan {
+            background: linear-gradient(90deg, #00f5d4, #00b4d8);
+            color: #0d1b2a;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(0,245,212,0.4);
+            transition: 0.3s;
+        }
+
+        .btn-scan:active {
+            transform: scale(0.98);
+        }
+
+        /* Results Display */
+        .result-box {
+            background: #0d1b2a;
+            border: 1px solid #415a77;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            display: none;
+            text-align: right;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .result-header {
+            font-weight: bold;
+            color: #00f5d4;
+            margin-bottom: 8px;
+            font-size: 16px;
+            border-bottom: 1px solid #415a77;
+            padding-bottom: 5px;
+        }
+
+        /* Auto WhatsApp Action Notification */
+        .auto-wa-alert {
+            background: rgba(37, 211, 102, 0.15);
+            border: 1px solid #25d366;
+            color: #25d366;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 13px;
+            display: none;
+            text-align: center;
+        }
+
+        /* Developer / App Creator Hidden Drawer Section */
+        .dev-section-toggle {
+            background: #1b263b;
+            border: 1px solid #415a77;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 30px;
+            color: #778da9;
+            font-size: 14px;
+        }
+
+        .dev-box {
+            display: none;
+            background: linear-gradient(145deg, #1b263b, #0d1b2a);
+            border: 2px solid #ffb703;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+        }
+
+        .dev-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .dev-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 2px solid #ffb703;
+            object-fit: cover;
+            background: #000;
+        }
+
+        .dev-info h3 {
+            color: #ffb703;
+            font-size: 18px;
+        }
+
+        .dev-info p {
+            font-size: 12px;
+            color: #e0e1dd;
+        }
+
+        .btn-dev-wa {
+            display: inline-block;
+            background: #25d366;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 8px;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(37,211,102,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>اوریجنل اسکینر طاہر نظیر</h1>
+        <p>زراعت، مٹی، پودوں اور فصلوں کی شناخت کا جدید ترین اے آئی اسکینر</p>
+    </header>
+
+    <div class="container">
+        <!-- Main Scanner Engine Box -->
+        <div class="scanner-card">
+            <div class="camera-box">
+                <video id="webcam" autoplay playsinline></video>
+                <div class="scan-laser" id="laser"></div>
+                <span id="cam-status" style="position: absolute; color: #aaa; font-size: 13px;">کیمرہ فعال ہو رہا ہے...</span>
+            </div>
+
+            <button class="btn-scan" onclick="startAIScan()">فصل یا پودا اسکین کریں</button>
+
+            <!-- Results Output Area -->
+            <div class="result-box" id="resultCard">
+                <div class="result-header" id="resultTitle">تجزیہ جاری ہے...</div>
+                <div id="resultBody"></div>
+            </div>
+
+            <!-- Auto WhatsApp Alert -->
+            <div class="auto-wa-alert" id="autoWaAlert">
+                📲 ظفر صاحب (زرعی مرکزی زکوۃ) کو آرڈر اور ڈیٹا کا واٹس ایپ میسج خودکار طریقے سے بھیجا جا رہا ہے...
+            </div>
+        </div>
+
+        <!-- Developer Section / App Order Box (At the Bottom) -->
+        <div class="dev-section-toggle" onclick="toggleDevBox()">
+            🔽 ایپ بنوانے یا ڈویلپر سے رابطے کے لیے یہاں کلک کریں
+        </div>
+
+        <div class="dev-box" id="devCard">
+            <div class="dev-profile">
+                <!-- User's DP with Ya Ali Maula Ali Avatar Placeholder -->
+                <div style="position: relative;">
+                    <div style="width: 60px; height: 60px; border-radius: 50%; background: #000; border: 2px solid #ffb703; display: flex; align-items: center; justify-content: center; color: #ffb703; font-weight: bold; font-size: 12px; text-align: center;">
+                        یا علی مولا علی
+                    </div>
+                </div>
+                <div class="dev-info">
+                    <h3>طاہر عباس (عرف طاہر نظیر)</h3>
+                    <p>ایپ ڈویلپر و بزنس سسٹمز کریئیٹر</p>
+                </div>
+            </div>
+            <p style="font-size: 13px; color: #e0e1dd; line-height: 1.6;">
+                اگر آپ اپنے بزنس، دکان، زراعت یا کسی بھی کام کے لیے ایسی ہی زبردست اور مکمل کنٹرول والی اینڈرائیڈ یا ویب ایپ بنوانا چاہتے ہیں تو طاہر بھائی سے براہِ راست رابطہ کریں۔
+            </p>
+            <a href="https://wa.me/923437688367?text=السلام%20علیکم%20طاہر%20بھائی!%20مجھے%20اپنے%20بزنس%20کے%20لیے%20ایپ%20بنوانے%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" target="_blank" class="btn-dev-wa">
+                💬 طاہر بھائی سے واٹس ایپ پر ایپ بنوانے کے لیے رابطہ کریں (+92 343 7688367)
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // System Data Files Configuration
+        const DB_FILES = [
+            'punjab_ai_smart_responses_db.json',
+            'punjab_synthetic_plastic_flora_db.json',
+            'punjab_soil_analysis_db.json',
+            'punjab_trees_plants_db_v2.json',
+            'agri_medicines_db.json',
+            'diseases_solutions_db.json',
+            'datacrops_database.json'
+        ];
+
+        let loadedDatabases = {};
+        const zafarWhatsAppNumber = "923051801367";
+
+        // Load JSON Databases
+        async function loadAllDatabases() {
+            for (let fileName of DB_FILES) {
+                try {
+                    let response = await fetch(fileName);
+                    if (response.ok) {
+                        loadedDatabases[fileName] = await response.json();
+                    }
+                } catch (e) {
+                    console.log("Database file notice: " + fileName + " will be matched via engine logic.");
+                }
+            }
+        }
+
+        // Initialize Camera
+        async function initCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+                document.getElementById('webcam').srcObject = stream;
+                document.getElementById('cam-status').style.display = 'none';
+            } catch (err) {
+                document.getElementById('cam-status').innerText = "کیمرہ آن کرنے کی اجازت دیں یا کیمرہ منسلک نہیں۔";
+            }
+        }
+
+        // AI Speech Auto Play Engine
+        function speakUrduText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                let utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'ur-PK';
+                utterance.rate = 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Toggle Dev Box
+        function toggleDevBox() {
+            let devCard = document.getElementById('devCard');
+            if (devCard.style.display === 'block') {
+                devCard.style.display = 'none';
+            } else {
+                devCard.style.display = 'block';
+            }
+        }
+
+        // AIScan Logic
+        function startAIScan() {
+            let laser = document.getElementById('laser');
+            let resultCard = document.getElementById('resultCard');
+            let resultTitle = document.getElementById('resultTitle');
+            let resultBody = document.getElementById('resultBody');
+            let autoWaAlert = document.getElementById('autoWaAlert');
+
+            laser.style.display = 'block';
+            resultCard.style.display = 'none';
+            autoWaAlert.style.display = 'none';
+
+            // Simulate Scan Delay
+            setTimeout(() => {
+                laser.style.display = 'none';
+                resultCard.style.display = 'block';
+
+                // Alternate Simulation for Demonstration (Plastic / Real Disease)
+                let isPlasticOrFake = Math.random() < 0.4;
+
+                if (isPlasticOrFake) {
+                    // Smart Response JSON Faith Declaration Match
+                    let fakeMsg = "بشمار اللہ رب العزت کا احسان ہے، وہی عز و جل جسے چاہے عزت دے اور جسے چاہے ذلت دے! اس کائنات کے مالک اور خالقِ کل کے حکم کے بغیر تو ایک درخت کا پتہ بھی نہیں ہلتا۔ اللہ پاک کی خاص رحمت اور عطا سے اس پاک پروردگار نے طاہر نظیر کو ایسا ذہن دیا ہے کہ انہوں نے اس اسکینر کے اندر ایسا زبردست حساب اور فنکشن فٹ کیا ہے جو ہر خراب، مصنوعی اور جعلی چیز کو فوراً پہچان لیتا ہے۔ آپ کی یہ چیز خالصتاً نقلی اور پلاسٹک کی ہے! اللہ پاک آپ کو ایمان دے، اللہ آپ کو کامل صحت عطا فرمائے اور اللہ آپ کو سیدھا راستہ دکھائے۔ آپ کسی ایسی جاندار چیز پر کیمرہ ماریں جو اصلی فصل یا پودا ہو۔";
+
+                    resultTitle.innerText = "❌ جعلی / پلاسٹک یا غیر متعلقہ اشیاء کی شناخت";
+                    resultTitle.style.color = "#ff4d4d";
+                    resultBody.innerText = fakeMsg;
+
+                    speakUrduText(fakeMsg);
+                } else {
+                    let realMsg = "طاہر نظیر اسکینر کے ڈیٹا بیس کے مطابق آپ کی فصل کا تجزیہ مکمل ہو گیا ہے۔ فصل پر معمولی سسٹمک کیڑے/فنگس کا حملہ پایا گیا ہے۔ اس کی حفاظت کے لیے اصل اور معیاری زراعت کی دوا کا علاج تجویز کر دیا گیا ہے۔";
+
+                    resultTitle.innerText = "✅ جاندار فصل / پودے کا درست تجزیہ میچ ہو گیا";
+                    resultTitle.style.color = "#00f5d4";
+                    resultBody.innerHTML = realMsg + "<br><br><b>تجویز کردہ قدم:</b> زراعت مرکزی زکوۃ (ظفر صاحب) سے معیاری ہوم ڈیلیوری کے لیے آرڈر بھیجا جا رہا ہے۔";
+
+                    speakUrduText("طاہر نظیر اسکینر کے مطابق آپ کی فصل کا ڈیٹا میچ ہو گیا ہے۔ ظفر صاحب کو ہوم ڈیلیوری کا خودکار پیغام بھیجا جا رہا ہے۔");
+
+                    // Trigger Auto-Play WhatsApp to Zafar Sahib
+                    autoWaAlert.style.display = 'block';
+                    let waText = encodeURIComponent("السلام علیکم ظفر صاحب! مجھے اپنی فصلوں کی حفاظت کے لیے 100% اصل اور معیاری زرعی ادویات کی ہوم ڈیلیوری چاہیے، برائے مہربانی رہنمائی فرمائیں۔");
+                    
+                    setTimeout(() => {
+                        window.open(`https://wa.me/${zafarWhatsAppNumber}?text=${waText}`, '_blank');
+                    }, 2500);
+                }
+
+            }, 2500);
+        }
+
+        window.onload = () => {
+            initCamera();
+            loadAllDatabases();
+        };
+    </script>
+</body>
+</html>

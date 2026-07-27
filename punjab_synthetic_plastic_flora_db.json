@@ -1,0 +1,90 @@
+{
+  "synthetic_metadata": {
+    "file_name": "punjab_synthetic_plastic_flora_db.json",
+    "project_name": "Tahir Nazeer Smart Crop & Plant Scanner - Synthetic & Plastic Detector DB",
+    "version": "4.0.0",
+    "description": "فیصل آباد، لاہور، اوکاڑہ، جڑانوالہ، سید والا اور پنجاب بھر میں گھروں، شادی ہالوں اور ریسٹورنٹس میں استعمال ہونے والے تمام پلاسٹک کے درختوں، جعلی پھولوں، ربڑ کے پودوں اور مصنوعی گھاس کے قالینوں کی مکمل سائنسی و کیمرہ لیزر شناخت کا ڈیٹا بیس",
+    "author": "Tahir Abbas (urf Tahir Nazeer)",
+    "target_regions": "Faisalabad, Lahore, Okara, Jaranwala, Syedwala, Chak 367, Chak 363 & Punjab"
+  },
+  "synthetic_plastic_items": [
+    {
+      "item_id": "fake_001",
+      "item_name_urdu": "مصنوعی گھاس کا قالین / ایسٹرو ٹرف (Artificial Grass Carpet)",
+      "local_names_urdu": "پلاسٹک دی گھاس، مصنوعی گھاس دا قالین، ایسٹرو ٹرف، ہرا قالین، ربڑ دی گھاس",
+      "found_in_locations_urdu": "فیصل آباد اور لاہور کی کوٹھیاں، اوکاڑہ اور جڑانوالہ کے شادی ہال، سید والا کے ریسٹورنٹ اور چھتوں پر آرائش کے لیے",
+      "laser_camera_scan_features_urdu": "کیمرہ/لیزر اسکین پر ربڑ کی نچلی کالی تہہ (Black Rubber/PVC Backing) نظر آنا، دھوپ یا کیمرے کی لائٹ میں سفید چمک (UV Glare)، تمام تنکوں کا ایک ہی سائز اور سیدھا ہونا، پتے کے اندر قدرتی رگوں (Veins) اور مساموں (Stomata) کا مکمل غائب ہونا۔",
+      "material_type_urdu": "پولی پروپیلین (Polypropylene / PVC / Rubber)",
+      "why_people_use_it_urdu": "پانی اور کٹائی کی ضرورت نہیں ہوتی، ہر موسم میں سبز رہتا ہے، لان کو صاف ستھرا رکھتا ہے۔",
+      "how_people_test_app_urdu": "لوگ کیمرہ اور لیزر گھاس کے قالین پر رکھ کر ایپ کو دھوکہ دینے کی کوشش کرتے ہیں کہ ایپ اسے سچی گھاس سمجھے۔",
+      "ai_scan_detection_result_urdu": "خبردار! یہ سچی قدرتی گھاس نہیں ہے۔ یہ پلاسٹک اور ربڑ کا بنا ہوا قالین (Artificial Grass Carpet) ہے۔",
+      "scan_warning_code": "PLASTIC_ARTIFICIAL_GRASS_DETECTED",
+      "app_action_response_urdu": "ایپ کیمرہ اسکین پر فوری بتائے گی: 'یہ ایک مصنوعی قالین ہے۔ اس پر کسی بیماری، آبیاری یا کھاد کا اطلاق نہیں ہوتا۔'"
+    },
+    {
+      "item_id": "fake_002",
+      "item_name_urdu": "پلاسٹک کی منی پلانٹ اور گلدستے کی بلیلیں (Plastic Money Plant Vines)",
+      "local_names_urdu": "پلاسٹک دی منی پلانٹ، جعلی بوٹی دی بیل، ربڑ دی وال بیل، کپڑے دی بیل",
+      "found_in_locations_urdu": "دیواروں کی سجاوٹ، ڈرائنگ رومز، لاہور و فیصل آباد کے کیفے، جڑانوالہ و سید والا کے فوٹو اسٹوڈیو",
+      "laser_camera_scan_features_urdu": "پتوں پر پلاسٹک کے سانچے کے نشانات (Plastic Mold Lines)، تنے اور پتے کے جوڑ پر پلاسٹک کے کنیکٹر (Plastic Joints)، ہر پتے کے سائز کا 100% ایک جیسا ہونا، پتے کو دبانے پر کپڑے یا نائلاون کی لچک۔",
+      "material_type_urdu": "سلک کپڑا + پولی تھیین پلاسٹک (Polyester Silk & PVC)",
+      "why_people_use_it_urdu": "دیواروں کو خوبصورت بنانے کے لیے، بغیر دھوپ اور پانی کے سالہا سال زندہ نظر آنے کے لیے۔",
+      "how_people_test_app_urdu": "گھر میں لٹکی ہوئی مصنوعی بیل کے پتے پر کیمرہ رکھ کر چیک کرتے ہیں کہ ایپ اسے زندہ منی پلانٹ کہتی ہے یا پلاسٹک۔",
+      "ai_scan_detection_result_urdu": "شناخت مکمل: یہ کپڑے اور پلاسٹک سے بنی ہوئی مصنوعی بیل (Fake Plastic Vine) ہے۔",
+      "scan_warning_code": "PLASTIC_VINE_DETECTED",
+      "app_action_response_urdu": "ایپ ڈسپلے کرے گی: 'یہ زندہ پودا نہیں ہے۔ براہ کرم اصلی پودے کا اسکین لیں۔'"
+    },
+    {
+      "item_id": "fake_003",
+      "item_name_urdu": "پلاسٹک اور کپڑے کے جعلی پھول (Artificial Flowers - Rose / Marigold)",
+      "local_names_urdu": "پلاسٹک دے پھُل، کپڑے دا گلاب، جعلی گیندا، کاغذی پھول",
+      "found_in_locations_urdu": "اوکاڑہ، سید والا اور فیصل آباد میں گاڑیوں کی سجاٹ، گلدستے، اور سٹیج کی ڈیکوریشن",
+      "laser_camera_scan_features_urdu": "پتیوں کے کناروں سے دھاگے نکلنا (Fabric Fraying)، لوہے کی تار پر پلاسٹک کا چڑھا ہوا تنا، پتیوں میں نمی (Cell Sap) زیرو ہونا، روشنی کا آر پار نہ گزرنا۔",
+      "material_type_urdu": "پالئیےسٹر فیبرک، تار اور گوند (Silk Fabric & Plastic Coated Wire)",
+      "why_people_use_it_urdu": "شادی بیاہ اور تقاریب میں سستی اور پائیدار سجاوٹ کے لیے۔",
+      "how_people_test_app_urdu": "مصنوعی پھول کے اوپر کیمرہ لا کر ایپ کا امتحان لیتے ہیں۔",
+      "ai_scan_detection_result_urdu": "شناخت: یہ کپڑے اور پلاسٹک کا مصنوعی پھول (Artificial Decorative Flower) ہے۔",
+      "scan_warning_code": "PLASTIC_FLOWER_DETECTED",
+      "app_action_response_urdu": "ایپ بتائے گی: 'یہ پودا سانس نہیں لیتا، اس میں کوئی پھول کی بیماری یا زرعی مسئلہ نہیں ہے۔'"
+    },
+    {
+      "item_id": "fake_004",
+      "item_name_urdu": "پلاسٹک کے گملے والے درخت و بونسائی (Plastic Ornamental Potted Tree)",
+      "local_names_urdu": "پلاسٹک دا گملے والا پودا، فائبر دا درخت، جعلی کھجور، جعلی بونسائی",
+      "found_in_locations_urdu": "بینکوں، لاہور و فیصل آباد کے دفاتر، اوکاڑہ اور جڑانوالہ کی دکانوں کے دروازوں پر",
+      "laser_camera_scan_features_urdu": "تنے پر قدرتی چھال کی جگہ فائبر گلاس یا ربڑ کی ساخت، گملے کے اندر مٹی کی جگہ کالی فوم یا چسباں پتھر، پتوں کا تنے میں ٹھونکا ہونا (Plugged Branches)۔",
+      "material_type_urdu": "فائبر گلاس تنا + پولی پروپیلین پتے (Fiberglass & Plastic Leaves)",
+      "why_people_use_it_urdu": "دفتر اور گھر کے کونوں کو خوبصورت بنانے کے لیے جہاں دھوپ نہیں آتی۔",
+      "how_people_test_app_urdu": "دفتر میں پڑے پلاسٹک کے گملے کے سامنے فون لے جا کر ایپ کو چکمہ دینے کی کوشش۔",
+      "ai_scan_detection_result_urdu": "شناخت: یہ فائبر اور پلاسٹک کا بنا ہوا مصنوعی درخت (Plastic Potted Tree) ہے۔",
+      "scan_warning_code": "PLASTIC_TREE_DETECTED",
+      "app_action_response_urdu": "ایپ سکرین پر لال الرٹ دے گی: 'جعلی پودا دریافت ہوا ہے۔'"
+    },
+    {
+      "item_id": "fake_005",
+      "item_name_urdu": "مصنوعی سبز دیوار پینل / ورٹیکل گارڈن (Artificial Green Wall Panel)",
+      "local_names_urdu": "پلاسٹک دی ہری کندھ، ورٹیکل میٹ، پٹھو میٹ، پلاسٹک جالی پینل",
+      "found_in_locations_urdu": "فیصل آباد کی ہاؤسنگ سوسائٹیز، لاہور کے ریستورانٹ، اور اوکاڑہ کے ماڈرن گھروں کی بیرونی دیواریں",
+      "visual_scan_features_urdu": "پشت پر پلاسٹک کی جالی (Square Plastic Grid Mesh)، پتوں کی متوازی ترتیب، گہرے اور ہلکے سبز رنگ کا پلاسٹک کا شیڈ۔",
+      "material_type_urdu": "ہائی ڈینسٹی پولی ایتھیلین (HDPE UV Plastic)",
+      "why_people_use_it_urdu": "دیواروں کی خرابی اور سیم کو چھپانے کے لیے۔",
+      "how_people_test_app_urdu": "دیوار پر لگے سبز پینل کے پاس جا کر کیمرہ اسکین چلاتے ہیں۔",
+      "ai_scan_detection_result_urdu": "شناخت: یہ پلاسٹک جالی پر بنا ہوا ورٹیکل گارڈن پینل (Synthetic Green Wall) ہے۔",
+      "scan_warning_code": "PLASTIC_WALL_PANEL_DETECTED",
+      "app_action_response_urdu": "ایپ دکھائے گی: 'یہ دیوار کی سجاٹ کا پلاسٹک میٹ ہے۔'"
+    },
+    {
+      "item_id": "fake_006",
+      "item_name_urdu": "مصنوعی کائی / فوم کا ہرا چٹائی میٹ (Artificial Moss / Green Foam Mat)",
+      "local_names_urdu": "پلاسٹک دی کائی، فوم دی سبزائی، جعلی کائی، سپنج میٹ",
+      "found_in_locations_urdu": "گلدستوں کے گملوں کی اوپری سطح، یکساں ہری ڈیکوریشن پٹی",
+      "laser_camera_scan_features_urdu": "باریک سپنج یا نائلاون کے دھاگے، بوندیں ڈالنے پر پانی کا جذب نہ ہونا، نرم فوم جیسی محسوسات۔",
+      "material_type_urdu": "نائلاون پاؤڈر + فوم سپنج (Nylon Flocking & Polyurethane Foam)",
+      "why_people_use_it_urdu": "گملوں کی مٹی چھپانے اور شیشہ کی نالیوں کی سجاوٹ کے لیے۔",
+      "how_people_test_app_urdu": "گملے کی کائی پر کیمرہ فوکس کر کے ایپ کا امتحان لیا جاتا ہے۔",
+      "ai_scan_detection_result_urdu": "شناخت: یہ نائلاون فوم کی بنی ہوئی مصنوعی کائی (Synthetic Moss) ہے۔",
+      "scan_warning_code": "SYNTHETIC_MOSS_DETECTED",
+      "app_action_response_urdu": "ایپ بتائے گی: 'یہ فوم کی مصنوعات ہے، قدرتی پودا نہیں ہے۔'"
+    }
+  ]
+}
