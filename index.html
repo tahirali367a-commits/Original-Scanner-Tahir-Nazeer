@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اوریجنل اسکینر طاہر نظیر - Original Scanner Tahir Nazeer</title>
+    
+    <!-- CSS Style Section -->
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0d1b2a; color: #ffffff; direction: rtl; text-align: right; padding-bottom: 40px; }
@@ -29,6 +31,7 @@
         .btn-dev-wa { display: inline-block; background: #25d366; color: #fff; text-decoration: none; font-weight: bold; padding: 10px 15px; border-radius: 8px; width: 100%; text-align: center; margin-top: 10px; font-size: 14px; }
         .data-tag { display: inline-block; background: #415a77; color: #00f5d4; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin: 3px; }
         .timer-box { font-size: 14px; color: #ffb703; margin-top: 8px; font-weight: bold; }
+        .search-input { width: 100%; padding: 12px; margin-top: 10px; border-radius: 8px; border: 1px solid #00b4d8; background: #0d1b2a; color: #fff; text-align: right; outline: none; }
     </style>
 </head>
 <body>
@@ -39,6 +42,7 @@
 
     <div class="container">
         <div class="scanner-card">
+            
             <div class="camera-box">
                 <video id="webcam" autoplay playsinline></video>
                 <img id="previewImg" style="display:none;" />
@@ -46,8 +50,11 @@
                 <span id="cam-status" style="position: absolute; color: #aaa; font-size: 13px;">کیمرہ فعال ہو رہا ہے...</span>
             </div>
 
-            <input type="file" id="cameraFileInput" accept="image/*" capture="environment" style="display:none;" onchange="handleFileSelect(event)">
+            <input type="file" id="cameraFileInput" accept="image/*" style="display:none;" onchange="handleFileSelect(event)">
             <button class="btn-camera-upload" onclick="document.getElementById('cameraFileInput').click()">📸 تصویر کھینچیں یا فائل اپلوڈ کریں</button>
+            
+            <input type="text" id="searchInput" class="search-input" placeholder="یا یہاں نام لکھ کر اسکین کریں...">
+
             <button class="btn-scan" onclick="startAIScan()">عملی اسکین شروع کریں</button>
 
             <div class="result-box" id="resultCard">
@@ -56,7 +63,7 @@
             </div>
 
             <div class="auto-wa-alert" id="autoWaAlert">
-                📲 ظفر صاحب (زرعی مرکزی زکوۃ) کو مکمل اسکیننگ رپورٹ ۴۹ سیکنڈ کے بعد خودکار واٹس ایپ کی جائے گی...
+                ظفر صاحب (زرعی مرکزی زکوۃ) کو مکمل اسکیننگ رپورٹ ۴۹ سیکنڈ کے بعد خودکار واٹس ایپ کی جائے گی...
                 <div class="timer-box" id="timerCount">وقت باقی: 49 سیکنڈ</div>
             </div>
         </div>
@@ -78,12 +85,13 @@
             <p style="font-size: 13px; color: #e0e1dd; line-height: 1.6;">
                 اگر آپ اپنے بزنس، دکان، زراعت یا کسی بھی کام کے لیے ایسی ہی زبردست اور مکمل کنٹرول والی اینڈرائیڈ یا ویب ایپ بنوانا چاہتے ہیں تو طاہر بھائی سے براہِ راست رابطہ کریں۔
             </p>
-            <a href="https://wa.me/923437688367?text=السلام%20علیکم%20طاہر%20بھائی!%20مجھے%20اپنے%20بزنس%20کے%20لیے%20ایپ%20بنوانے%20کے%20بارے%20میں%20معلومات%20چاہئیں۔" target="_blank" class="btn-dev-wa">
+            <a href="https://wa.me/923437688367?text=السلام%20علیکم%20طاہر%20بھائی!%20مجھے%20اپنے%20بزنس%20کے%20لیے%20ایپ%20بنوانے%20کے%20بارے%20میں%20معلومات%20چاہیں۔" target="_blank" class="btn-dev-wa">
                 💬 طاہر بھائی سے واٹس ایپ پر ایپ بنوانے کے لیے رابطہ کریں (+92 343 7688367)
             </a>
         </div>
     </div>
 
+    <!-- MAIN ENGINE SCRIPT -->
     <script>
         const DB_FILES = [
             'punjab_ai_smart_responses_db.json',
@@ -100,16 +108,17 @@
         let currentImageName = "";
         let countdownTimer = null;
 
+        // Auto Load 7 JSON Files
         async function loadAllDatabases() {
             for (let fileName of DB_FILES) {
                 try {
                     let response = await fetch('./' + fileName);
                     if (response.ok) {
                         loadedDatabases[fileName] = await response.json();
-                        console.log("فائل کامیابی سے کھلی: " + fileName);
+                        console.log("Database Loaded: " + fileName);
                     }
                 } catch (e) {
-                    console.log("فائل کھولنے میں مسئلہ: " + fileName);
+                    console.log("Failed to load: " + fileName);
                 }
             }
         }
@@ -133,7 +142,9 @@
         function handleFileSelect(event) {
             const file = event.target.files[0];
             if (file) {
-                currentImageName = file.name.toLowerCase();
+                currentImageName = file.name.split('.')[0].toLowerCase();
+                document.getElementById('searchInput').value = currentImageName;
+
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     const img = document.getElementById('previewImg');
@@ -161,87 +172,29 @@
             devCard.style.display = devCard.style.display === 'block' ? 'none' : 'block';
         }
 
-        // تمام فائلوں میں سے صحیح معلومات ڈھونڈنے کا انجن
-        function getSmartExactMatch() {
-            let matchedCategory = "crop";
-            
-            if (currentImageName.includes("soil") || currentImageName.includes("mitti") || currentImageName.includes("مٹی")) {
-                matchedCategory = "soil";
-            } else if (currentImageName.includes("tree") || currentImageName.includes("darakht") || currentImageName.includes("درخت") || currentImageName.includes("plant")) {
-                matchedCategory = "tree";
-            } else if (currentImageName.includes("plastic") || currentImageName.includes("synthetic") || currentImageName.includes("flora") || currentImageName.includes("پلاسٹک")) {
-                matchedCategory = "plastic";
-            }
+        // SMART SEARCH ENGINE (JSON Exact Match Logic)
+        function searchExactMatches(keyword) {
+            let results = [];
+            let cleanKey = keyword.trim().toLowerCase();
 
-            let cropInfo = "";
-            let diseaseInfo = "";
-            let medicineInfo = "";
-            let soilInfo = "";
-            let fileUsed = "";
+            if (!cleanKey) return results;
 
-            // 1. مٹی کی فائل
-            if (matchedCategory === "soil" && loadedDatabases['punjab_soil_analysis_db.json']) {
-                let db = loadedDatabases['punjab_soil_analysis_db.json'];
-                let item = Array.isArray(db) ? db[Math.floor(Math.random() * db.length)] : db;
-                soilInfo = item.soil_type || item.soil_condition || item.name || "پنجاب کی زرخیز مٹی (پی ایچ نارمل)";
-                diseaseInfo = item.problem || item.deficiency || "نائٹروجن کی معمولی کمی اور نمی کا مسئلہ";
-                medicineInfo = item.solution || item.fertilizer || "گوبر کی کھاد + جپسم کا استعمال";
-                cropInfo = "مٹی کا نمونہ";
-                fileUsed = 'punjab_soil_analysis_db.json';
-            } 
-            // 2. درختوں اور پودوں کی فائل
-            else if (matchedCategory === "tree" && loadedDatabases['punjab_trees_plants_db_v2.json']) {
-                let db = loadedDatabases['punjab_trees_plants_db_v2.json'];
-                let item = Array.isArray(db) ? db[Math.floor(Math.random() * db.length)] : db;
-                cropInfo = item.tree_name || item.plant_name || item.name || "پنجاب کا دیسی درخت / پودا";
-                diseaseInfo = item.disease || item.symptoms || "تنے کی سسٹمک بیماری اور پتوں پر دھبے";
-                medicineInfo = item.treatment || item.medicine || "کوپر آکسی کلورائڈ + امینو ایسڈ اسپرے";
-                soilInfo = "درخت کے لیے مناسب مٹی";
-                fileUsed = 'punjab_trees_plants_db_v2.json';
-            }
-            // 3. پلاسٹک اور سنتھیٹک سامان کی فائل
-            else if (matchedCategory === "plastic" && loadedDatabases['punjab_synthetic_plastic_flora_db.json']) {
-                let db = loadedDatabases['punjab_synthetic_plastic_flora_db.json'];
-                let item = Array.isArray(db) ? db[Math.floor(Math.random() * db.length)] : db;
-                cropInfo = item.item_name || item.material || "مصنوعی / پلاسٹک پودا یا پھول";
-                diseaseInfo = item.status || "غیر جاندار / پلاسٹک مٹیریل (کوئی بیماری نہیں)";
-                medicineInfo = "کسی دوا یا اسپرے کی ضرورت نہیں (صرف صفائی کریں)";
-                soilInfo = "غیر زراعی مٹیریل";
-                fileUsed = 'punjab_synthetic_plastic_flora_db.json';
-            }
-            // 4. عام فصلوں، دواؤں اور بیماریوں کی فائلیں
-            else {
-                for (let fileName in loadedDatabases) {
-                    let db = loadedDatabases[fileName];
-                    if (Array.isArray(db) && db.length > 0) {
-                        let sample = db[Math.floor(Math.random() * db.length)];
-                        if (!cropInfo && (sample.crop || sample.plant_name || sample.name)) {
-                            cropInfo = sample.crop || sample.plant_name || sample.name;
-                            fileUsed = fileName;
-                        }
-                        if (!diseaseInfo && (sample.disease || sample.symptoms || sample.problem)) {
-                            diseaseInfo = sample.disease || sample.symptoms || sample.problem;
-                        }
-                        if (!medicineInfo && (sample.medicine || sample.spray || sample.treatment || sample.solution)) {
-                            medicineInfo = sample.medicine || sample.spray || sample.treatment || sample.solution;
-                        }
-                        if (!soilInfo && (sample.soil_type || sample.soil_condition)) {
-                            soilInfo = sample.soil_type || sample.soil_condition;
-                        }
+            for (let fileName in loadedDatabases) {
+                let dbData = loadedDatabases[fileName];
+                let items = Array.isArray(dbData) ? dbData : [dbData];
+
+                for (let item of items) {
+                    let fullText = JSON.stringify(item).toLowerCase();
+                    if (fullText.includes(cleanKey)) {
+                        results.push({ file: fileName, data: item });
                     }
                 }
             }
-
-            return {
-                crop: cropInfo || "پنجاب زراعی فصل / پودا",
-                disease: diseaseInfo || "پتوں پر کیڑے کا حملہ اور فنگس",
-                medicine: medicineInfo || "امیڈا کلوپرڈ اسپرے + معیاری فنگی سائیڈ",
-                soil: soilInfo || "زرخیز مٹی (پی ایچ موزوں)",
-                file: fileUsed || "datacrops_database.json"
-            };
+            return results;
         }
 
         function startAIScan() {
+            let searchVal = document.getElementById('searchInput').value;
             let laser = document.getElementById('laser');
             let resultCard = document.getElementById('resultCard');
             let resultTitle = document.getElementById('resultTitle');
@@ -251,59 +204,77 @@
 
             if (countdownTimer) clearInterval(countdownTimer);
 
+            if (!searchVal) {
+                alert("براہ کرم تصویر منتخب کریں یا سرچ باکس میں نام لکھیں!");
+                return;
+            }
+
             laser.style.display = 'block';
             resultCard.style.display = 'none';
             autoWaAlert.style.display = 'none';
 
-            // اسکیننگ کا 3 سیکنڈ اینیمیشن
             setTimeout(() => {
                 laser.style.display = 'none';
                 resultCard.style.display = 'block';
 
-                let match = getSmartExactMatch();
-                let loadedCount = Object.keys(loadedDatabases).length;
+                let actualMatches = searchExactMatches(searchVal);
 
-                let finalDataMsg = `
-                    <b>🔍 طاہر نظیر اسکینر نتائج (درست میچ):</b><br>
-                    <span class="data-tag">ایکٹیو فائلیں: ${loadedCount} / 7</span>
-                    <span class="data-tag">استعمال شدہ فائل: ${match.file}</span><br><br>
-                    🌱 <b>شناخت (پودا / درخت / مٹی / سامان):</b> ${match.crop}<br>
-                    🌾 <b>مٹی کا تجزیہ:</b> ${match.soil}<br>
-                    🐛 <b>شناخت شدہ بیماری / علامات:</b> ${match.disease}<br>
-                    💊 <b>تجویز کردہ علاج / فارمولا دوائی:</b> ${match.medicine}<br>
-                `;
+                if (actualMatches.length > 0) {
+                    let firstMatch = actualMatches[0];
+                    let item = firstMatch.data;
 
-                resultTitle.innerText = "✅ اسکیننگ مکمل! تمام 7 فائلوں سے ڈیٹا میچ ہو گیا";
-                resultTitle.style.color = "#00f5d4";
-                resultBody.innerHTML = finalDataMsg;
+                    let cropInfo = item.crop || item.plant_name || item.tree_name || item.item_name || item.name || "معلومات درج نہیں";
+                    let diseaseInfo = item.disease || item.symptoms || item.problem || item.deficiency || item.status || "معلومات درج نہیں";
+                    let medicineInfo = item.medicine || item.spray || item.treatment || item.solution || item.fertilizer || "معلومات درج نہیں";
+                    let soilInfo = item.soil_type || item.soil_condition || "معلومات درج نہیں";
 
-                speakUrduText("اسکیننگ مکمل ہو گئی ہے۔ نتائج اسکرین پر دکھا دیے گئے ہیں۔ 49 سیکنڈ بعد ظفر صاحب کو خودکار پیغام بھیجا جا رہا ہے۔");
-                
-                autoWaAlert.style.display = 'block';
+                    let finalDataMsg = `
+                        <b>طاہر نظیر اسکینر نتائج (اصل JSON ڈیٹا):</b><br>
+                        <span class="data-tag">فائل: ${firstMatch.file}</span>
+                        <span class="data-tag">کل ریکارڈز: ${actualMatches.length}</span><br><br>
+                        <b>شناخت:</b> ${cropInfo}<br>
+                        <b>مٹی کی کیفیت:</b> ${soilInfo}<br>
+                        <b>شناخت شدہ بیماری / مسئلہ:</b> ${diseaseInfo}<br>
+                        <b>تجویز کردہ اصلی علاج:</b> ${medicineInfo}<br>
+                    `;
 
-                // 49 سیکنڈز کا کاؤنٹ ڈاؤن ٹائمر
-                let timeLeft = 49;
-                timerCount.innerText = "وقت باقی: " + timeLeft + " سیکنڈ";
+                    resultTitle.innerText = "اصل فائل سے حقیقی ڈیٹا مل گیا";
+                    resultTitle.style.color = "#00f5d4";
+                    resultBody.innerHTML = finalDataMsg;
 
-                countdownTimer = setInterval(() => {
-                    timeLeft--;
+                    speakUrduText("اسکیننگ مکمل ہو گئی ہے۔ نتائج دکھا دیے گئے ہیں۔ ۴۹ سیکنڈ بعد ظفر صاحب کو پیغام بھیجا جا رہا ہے۔");
+                    
+                    autoWaAlert.style.display = 'block';
+
+                    let timeLeft = 49;
                     timerCount.innerText = "وقت باقی: " + timeLeft + " سیکنڈ";
 
-                    if (timeLeft <= 0) {
-                        clearInterval(countdownTimer);
+                    countdownTimer = setInterval(() => {
+                        timeLeft--;
+                        timerCount.innerText = "وقت باقی: " + timeLeft + " سیکنڈ";
 
-                        let waMsgText = `السلام علیکم ظفر صاحب! طاہر نظیر اسکینر کے ذریعے معائنہ مکمل ہوا ہے۔
-📌  شناخت: ${match.crop}
-📌 مسئلہ / بیماری: ${match.disease}
-📌 تجویز کردہ علاج: ${match.medicine}
-برائے مہربانی اس ہوم ڈیلیوری آرڈر کے لیے رہنمائی فرمائیں۔`;
+                        if (timeLeft <= 0) {
+                            clearInterval(countdownTimer);
 
-                        let waText = encodeURIComponent(waMsgText);
-                        window.open(`https://wa.me/${zafarWhatsAppNumber}?text=${waText}`, '_blank');
-                    }
-                }, 1000);
+                            let waMsgText = `السلام علیکم ظفر صاحب! طاہر نظیر اسکینر کے ذریعے معائنہ مکمل ہوا ہے۔
+شناخت: ${cropInfo}
+مسئلہ / بیماری: ${diseaseInfo}
+تجویز کردہ علاج: ${medicineInfo}
+برائے مہربانی اس آرڈر کے لیے رہنمائی فرمائیں۔`;
 
-            }, 3000);
+                            let waText = encodeURIComponent(waMsgText);
+                            window.open(`https://wa.me/${zafarWhatsAppNumber}?text=${waText}`, '_blank');
+                        }
+                    }, 1000);
+
+                } else {
+                    resultTitle.innerText = "کوئی ڈیٹا نہیں ملا";
+                    resultTitle.style.color = "#ff4d4d";
+                    resultBody.innerHTML = `سرور میں موجود ۷ فائلوں کے اندر "<b>${searchVal}</b>" کا کوئی اصل ریکارڈ موجود نہیں ہے۔`;
+                    speakUrduText("دی گئی فائلوں میں اس کا کوئی ڈیٹا نہیں مل سکا۔");
+                }
+
+            }, 2500);
         }
 
         window.onload = () => {
